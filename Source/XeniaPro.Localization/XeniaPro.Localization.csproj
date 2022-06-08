@@ -7,10 +7,12 @@
     <StartupObject />
     <Configurations>Debug;Release;Local</Configurations>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageVersion>0.0.2</PackageVersion>
+    <Title>Xenia Pro Localization</Title>
+    <Copyright>All Rights Reserved (c) Xenia Pro GmbH</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.5" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 

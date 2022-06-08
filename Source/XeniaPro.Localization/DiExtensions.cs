@@ -1,4 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
+using XeniaPro.Localization.LanguageProviders;
+using XeniaPro.Localization.LocaleProviders;
+using XeniaPro.Localization.Localizers;
+using XeniaPro.Localization.Models;
 
 namespace XeniaPro.Localization;
 
@@ -11,4 +15,5 @@ public static class DiExtensions
         services.AddScoped<ILanguageProvider, LanguageProvider>(_ => new LanguageProvider(options));
         return services;
     }
+    
 }

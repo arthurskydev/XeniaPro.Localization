@@ -1,0 +1,13 @@
+{
+  "HostUrl": "http://localhost",
+  "Languages" : [
+    {
+      "Name" : "Deutsch",
+      "ShortHand" : "de"
+    },
+    {
+      "Name" : "English",
+      "ShortHand" : "en"
+    }
+  ]
+}

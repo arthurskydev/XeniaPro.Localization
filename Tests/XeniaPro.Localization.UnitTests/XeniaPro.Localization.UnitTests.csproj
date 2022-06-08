@@ -14,10 +14,20 @@
         <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
         <PackageReference Include="NUnit.Analyzers" Version="3.3.0" />
         <PackageReference Include="coverlet.collector" Version="3.1.2" />
+        <PackageReference Include="RichardSzalay.MockHttp" Version="6.0.0" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\XeniaPro.Localization.csproj" />
+      <ProjectReference Include="..\..\Source\XeniaPro.Localization\XeniaPro.Localization.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="de.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="restOptions.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

@@ -396,3 +396,6 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+.idea/.idea.XeniaPro.Localization/.idea/vcs.xml
+.idea/.idea.XeniaPro.Localization/.idea/workspace.xml
+.idea/.idea.XeniaPro.Localization/.idea/workspace.xml

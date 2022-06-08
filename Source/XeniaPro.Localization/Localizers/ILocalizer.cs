@@ -1,4 +1,4 @@
-namespace XeniaPro.Localization;
+namespace XeniaPro.Localization.Localizers;
 
 public interface ILocalizer
 {

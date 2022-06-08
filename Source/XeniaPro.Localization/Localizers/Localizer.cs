@@ -1,4 +1,7 @@
-namespace XeniaPro.Localization;
+using XeniaPro.Localization.LanguageProviders;
+using XeniaPro.Localization.LocaleProviders;
+
+namespace XeniaPro.Localization.Localizers;
 
 public class Localizer : ILocalizer
 {

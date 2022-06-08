@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using XeniaPro.Localization.Models;
 
-namespace XeniaPro.Localization;
+namespace XeniaPro.Localization.LanguageProviders;
 
 public interface ILanguageProvider
 {

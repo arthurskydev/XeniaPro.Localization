@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DDB690CD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeniaPro.Localization.UnitTests", "Tests\XeniaPro.Localization.UnitTests\XeniaPro.Localization.UnitTests.csproj", "{2CB2BAC2-C42D-460C-8309-A51944C756E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeniaPro.Localization.Components", "Source\XeniaPro.Localization.Components\XeniaPro.Localization.Components.csproj", "{4DD63356-63F3-4E73-AC50-41597E30B6F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +30,14 @@ Global
 		{2CB2BAC2-C42D-460C-8309-A51944C756E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CB2BAC2-C42D-460C-8309-A51944C756E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CB2BAC2-C42D-460C-8309-A51944C756E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD63356-63F3-4E73-AC50-41597E30B6F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD63356-63F3-4E73-AC50-41597E30B6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD63356-63F3-4E73-AC50-41597E30B6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD63356-63F3-4E73-AC50-41597E30B6F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2D58FC6C-B0DF-410B-91AB-FFB65EEFA8F7} = {679F67DC-6CA9-4980-810F-8E1257D83E30}
 		{2CB2BAC2-C42D-460C-8309-A51944C756E7} = {DDB690CD-E5B1-40DE-B08A-62B087896FB5}
+		{4DD63356-63F3-4E73-AC50-41597E30B6F1} = {679F67DC-6CA9-4980-810F-8E1257D83E30}
 	EndGlobalSection
 EndGlobal
