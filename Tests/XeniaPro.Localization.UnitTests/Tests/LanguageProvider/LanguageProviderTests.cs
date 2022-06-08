@@ -1,18 +1,21 @@
+using Microsoft.Extensions.Options;
 using XeniaPro.Localization.Exceptions;
 using XeniaPro.Localization.LanguageProviders;
 using XeniaPro.Localization.Models;
 using XeniaPro.Localization.UnitTests.Setup;
 
-namespace XeniaPro.Localization.UnitTests.Tests;
+namespace XeniaPro.Localization.UnitTests.Tests.LanguageProvider;
 
+[TestFixture]
 public class LanguageProviderTests
 {
     private ILanguageProvider _provider = null!;
-
+    
     [SetUp]
-    public void Setup()
+    public void MsOptions()
     {
-        _provider = new LanguageProvider(TestSetup.RestOptions);
+        var options = Options.Create(TestSetup.RestOptions);
+        _provider = new LanguageProviders.LanguageProvider(options);
     }
 
     [Test]

@@ -15,14 +15,7 @@ public class RestLocalizationProvider : IAsyncLocalizationProvider
 {
     private readonly List<ILocaleTable> _locales = new();
     private readonly HttpClient _client;
-
-    public event Action LanguagesUpdated;
-
-    public RestLocalizationProvider(RestLocalizationOptions options)
-    {
-        _client = new HttpClient();
-        _client.BaseAddress = new Uri(options.HostUri);
-    }
+    private readonly object _lockObj = new();
 
     public RestLocalizationProvider(HttpClient client)
     {
@@ -32,30 +25,49 @@ public class RestLocalizationProvider : IAsyncLocalizationProvider
     public RestLocalizationProvider(IOptions<RestLocalizationOptions> options)
     {
         _client = new HttpClient();
-        _client.BaseAddress = new Uri(options.Value.HostUri);
+        _client.BaseAddress = new Uri(options.Value.ResourceUrl);
     }
 
-    public ILocaleTable GetTableFor(Language language)
+    public event Action LanguagesUpdated;
+
+    public async ValueTask<ILocaleTable> GetTableAsync(Language language)
     {
-        var table = _locales.Find(x => x.Language == language);
+        ILocaleTable table;
+        lock (_lockObj)
+        {
+            table = _locales.Find(x => x.Language == language);
+        }
+        
         if (table is not null)
         {
             return table;
         }
 
-        LoadTable(language).ConfigureAwait(false);
-        _locales.Add(new LocaleTable(new Dictionary<string, string>(), language));
-        return GetTableFor(language);
-    }
+        lock (_lockObj)
+        {
+            _locales.Add(LocaleTable.CreateEmpty(language));
+        }
+        
+        var httpResult = await _client.GetAsync($"{language.ShortHand}.json");
+        
+        if (!httpResult.IsSuccessStatusCode)
+        {
+            throw new TableDoesNotExistException(language);
+        }
 
-    private async Task LoadTable(Language language)
-    {
-        await using var httpStream = await _client.GetStreamAsync($"{language.ShortHand}.json");
-        if (httpStream is null) throw new TableDoesNotExistException(language);
-        var strings = await JsonSerializer.DeserializeAsync<Dictionary<string, string>>(httpStream);
-        var table = new LocaleTable(strings, language);
-        _locales.Remove(_locales.First(x => x.Language == language));
-        _locales.Add(table);
+        var strings =
+            await JsonSerializer.DeserializeAsync<Dictionary<string, string>>(
+                await httpResult.Content.ReadAsStreamAsync());
+        
+        table = new LocaleTable(strings, language);
+
+        lock (_lockObj)
+        {
+            _locales.Remove(_locales.First(x => x.Language == language));
+            _locales.Add(table);
+        }
+        
         LanguagesUpdated?.Invoke();
+        return table;
     }
 }

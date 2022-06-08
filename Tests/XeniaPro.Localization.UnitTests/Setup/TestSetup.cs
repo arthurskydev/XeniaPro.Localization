@@ -6,8 +6,7 @@ namespace XeniaPro.Localization.UnitTests.Setup;
 public static class TestSetup
 {
     private static RestLocalizationOptions? _options;
-    private static string? _deJson;
-    private static Dictionary<string, string>? _strings;
+
     public static RestLocalizationOptions RestOptions
     {
         get
@@ -16,6 +15,7 @@ public static class TestSetup
             {
                 return _options;
             }
+
             var restOptionsJson = File.ReadAllText($"{Directory.GetCurrentDirectory()}/restOptions.json");
             var restOptions = JsonSerializer.Deserialize<RestLocalizationOptions>(restOptionsJson);
             _options = restOptions;
@@ -23,30 +23,29 @@ public static class TestSetup
         }
     }
 
-    public static string DeJson
+    private static readonly Dictionary<string, string> Locales = new();
+    public static string GetLocaleFile(string langCode)
     {
-        get
+        if (Locales.ContainsKey(langCode))
         {
-            if (_deJson is not null)
-            {
-                return _deJson;
-            }
-            _deJson = File.ReadAllText($"{Directory.GetCurrentDirectory()}/de.json");
-            return DeJson;
+            return Locales[langCode];
         }
+        
+        var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/{langCode}.json");
+        Locales.Add(langCode, json);
+        return json;
     }
 
-    public static Dictionary<string, string> Strings
+    private static readonly Dictionary<string, Dictionary<string, string>> Dictionaries = new();
+    public static Dictionary<string, string> GetDictionary(string langCode)
     {
-        get
-        {
-            if (_strings is not null)
+            if (Dictionaries.ContainsKey(langCode))
             {
-                return _strings;
+                return Dictionaries[langCode];
             }
 
-            _strings = JsonSerializer.Deserialize<Dictionary<string, string>>(DeJson)!;
-            return Strings;
-        }
+            var dict = JsonSerializer.Deserialize<Dictionary<string, string>>(GetLocaleFile(langCode));
+            Dictionaries.Add(langCode, dict!);
+            return dict!;
     }
 }

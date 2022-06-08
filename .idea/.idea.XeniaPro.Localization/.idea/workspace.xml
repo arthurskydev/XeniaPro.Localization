@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8582a866-ded0-44d3-9e61-304fcfc6530b" name="Changes" comment="yolo">
+    <list default="true" id="8582a866-ded0-44d3-9e61-304fcfc6530b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/Localizers/AsyncLocalizer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProvider/LanguageProviderTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/Localizer/AsyncLocalizerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.XeniaPro.Localization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XeniaPro.Localization/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/XeniaPro.Localization.Components.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/XeniaPro.Localization.Components.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/DiExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/DiExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LanguageProviders/ILanguageProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/LanguageProviders/ILanguageProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LanguageProviders/LanguageProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/LanguageProviders/LanguageProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/IAsyncLocalizationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/IAsyncLocalizationProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/ILocalizationProvider.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/RestLocalizationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/RestLocalizationProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleTables/LocaleTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleTables/LocaleTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/Localizers/Localizer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/Models/RestLocalizationOptions.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/XeniaPro.Localization.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/XeniaPro.Localization.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProviderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Setup/TestSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Setup/TestSetup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProviderTests.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleTableTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleTable/LocaleTableTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/RestLocalizationProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/RestLocalizationProviderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/XeniaPro.Localization.UnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/XeniaPro.Localization.UnitTests.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,26 +36,39 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b046e286a344b85999e7c798bc1fc145e00/1f/e78adfba/MockHttpMessageHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/66769cbfeae14a56a4cf5a826836f68d83488/da/8a83c510/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/aaaefdf6d8ba49648b565fcd9ee5ac1d3da90/1d/804d3c57/Uri.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/aaaefdf6d8ba49648b565fcd9ee5ac1d3da90/5d/7fd414f4/UriHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/145837ceeabac303f80aa7e48d8de10b6b2e03ed06861b2443686f93c4147da/HttpClientJsonExtensions.Get.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1af51483c9bf18871cce649b9f966dd7be686536f998c33bba3c5fc4adea4a0/Task.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e8feaadf5c3fa14d36ea2a638c432a2e1a47b7837d8b83d88303c5d9c15cf/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2092594986cef463403359ef7a2b70c093702cde2d09da41faa694648726f8c/ThreadPoolWorkQueue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/27b91272f348469b8fccc471c1ccd767f57a64f55a44975790bfae805b4ebb/Future.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/377e91d7ed75931c14e7e44ff9bbd28aab526bde89b36eb6a19668835fc09e/PortableThreadPool.WorkerThread.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e3fb5b4de57b78caaf18cfaa0f6155773d67b4f5698b7cdfe39cee3ec3df1/TaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea95343b9387b73062a9b61b7538f826c54ce3529632b4472ba4494044d23/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/48c3d3e27a3992b5816511af754196140ae50726131f3e6f6bdbf4a339e8364/Assert.Exceptions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5eaf6f9dd55429069729b5d6a6b99c1571fb63cf5689bed62ef241e99e88d7/TaskCompletionSource_T.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5fc3c421882a4cf46961b0e3d388fdd679167842182de786f47ae2be28eb/ThreadPool.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/732a3ff679450a837fc08eaccb7fabe4f5602b49befb51bc8369197e06bb6/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/745b68ad7a384fa253a38162221d5f987ce7476e5e42a3d0e331bd7eef766418/PortableThreadPool.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/974fa14c57bab8fe29f1bddd39b1a6548b9cc8cf9e0ef5e670c2407a56d9/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/999149dd7f62d844e3ed696d880a872352f8f775ea58b51030c7b360ddb/HttpRequestMessage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b2c3e28468b2a9ae5485968818c48fd40338a6b8ae1295f29a355225a8d238/First.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c07a1d303f6388b4f360b66d3f1df41ba410cfc473175f62e1d9740aac986/LowLevelLifoSemaphore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1da7b6c7c71a954fe3eb2531c6476711b3e6d93a8d76795386d326bb9dbc/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ad457575d35dcbff26c9a5e3fb1d92f1d3c55f25ef6ebf475367b5d8/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ca860fea1234fdab4474cfa1911d325a886a3e2e7692197955e531a9eb8e081/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cf91eb35ab781c324ad4fa382dce85631ec37cf3813529f7c92208d866c851/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/df71358f7b7337a1eee3a65abe6d678dd9a065e256b8cc3fd44a2949754/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e0966dc63699861af122d851f53ec41738f7e6baa7e95e5d481f74612b1e814/ConcurrentQueueSegment.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e329bd4f14a42c5f6951d92d29ba7796e511d77e6a35ab20a5a38f50ba6fd74/HttpResponseMessage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e7e231682be8652744726acc6de35323daa68061429db55e0c251114902f60/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f0db988daf92f8d24bf9dccdd2fd9fd3238ef4e5dc5c7b12bd4b837a64ae/Version.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f833e5784f5b87eab13492bce4877364ff40cea6a19077f3ce48ccf7c1a37/LowLevelLifoSemaphore.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f8ca84d3d159b4baf88edb942846b03461b59279c70f1399fe02cc1a280c8a1/ThreadPoolTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/XeniaPro.Localization/Localizers/AsyncLocalizer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -51,18 +78,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.49714285&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="b0b8352a-1868-44f2-a7c2-b2d08d1d9ca0" />
+}]]></component>
+  <component name="RunManager" selected="Publish to folder.Publish XeniaPro.Localization.Components to folder">
+    <configuration name="Publish XeniaPro.Localization to folder" type="DotNetFolderPublish" factoryName="Publish to folder" singleton="false">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/Source/XeniaPro.Localization/bin/Release/net6.0/publish" target_framework="net6.0" uuid_high="3267639073411383563" uuid_low="-7949979558450583305" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Publish XeniaPro.Localization.Components to folder" type="DotNetFolderPublish" factoryName="Publish to folder">
+      <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/bin/Release/net6.0/publish" target_framework="net6.0" uuid_high="5608726832073625203" uuid_low="-6030248048424077583" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -87,7 +123,12 @@
       <workItem from="1654632877218" duration="1205000" />
       <workItem from="1654681316028" duration="316000" />
       <workItem from="1654684487517" duration="136000" />
-      <workItem from="1654684683127" duration="740000" />
+      <workItem from="1654684683127" duration="1057000" />
+      <workItem from="1654690195936" duration="350000" />
+      <workItem from="1654690591534" duration="52000" />
+      <workItem from="1654690685680" duration="844000" />
+      <workItem from="1654691567418" duration="7524000" />
+      <workItem from="1654710433938" duration="4765000" />
     </task>
     <task id="LOCAL-00001" summary="yolo">
       <created>1654546904890</created>
@@ -124,11 +165,85 @@
       <option name="project" value="LOCAL" />
       <updated>1654684828334</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Features:&#10;Added configuration via Microsoft.Extensions.Configuration&#10;&#10;API Changes:&#10;Changed ILanguageProvider.GetLanguages property name to ILanguageProvider.Languages">
+      <created>1654685522543</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1654685522543</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnitTestsCoverage.Settings">
+    <option name="coveragePercentColumnWidth" value="149" />
+    <option name="sortOrder" value="DESCENDING" />
+    <option name="sortedColumn" value="1" />
+    <option name="symbolColumnWidth" value="292" />
+    <coverage-tree-state>
+      <expand>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RestLocalizationOptions 50% 2/4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RestLocalizationOptions 50% 2/4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Languages 100% 0/2" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RestLocalizationOptions 50% 2/4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="ResourceUrl 0% 2/2" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DiExtensions 0% 9/9" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+      </expand>
+      <select />
+    </coverage-tree-state>
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
@@ -148,6 +263,26 @@
     <MESSAGE value="add test project and rearange directory structure" />
     <MESSAGE value="add unversioned files" />
     <MESSAGE value="yolo" />
-    <option name="LAST_COMMIT_MESSAGE" value="yolo" />
+    <MESSAGE value="Features:&#10;Added configuration via Microsoft.Extensions.Configuration&#10;&#10;API Changes:&#10;Changed ILanguageProvider.GetLanguages property name to ILanguageProvider.Languages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Features:&#10;Added configuration via Microsoft.Extensions.Configuration&#10;&#10;API Changes:&#10;Changed ILanguageProvider.GetLanguages property name to ILanguageProvider.Languages" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/RestLocalizationProviderTests.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\Users\arthur\Documents\GitHub\XeniaPro.Localization\Tests\XeniaPro.Localization.UnitTests\Tests\LocalizationProviderTests\RestLocalizationProviderTests.cs" initialLine="38" containingFunctionPresentation="method 'DoesUpdateAndProvideSet'">
+            <startOffsets>
+              <option value="1423" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1722" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

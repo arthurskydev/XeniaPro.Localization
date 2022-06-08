@@ -16,4 +16,7 @@ public class LocaleTable : ILocaleTable
 
     public string GetByKey(string key)
         => StringCollection.TryGetValue(key, out var result) ? result : string.Empty;
+
+    public static LocaleTable CreateEmpty(Language language)
+        => new LocaleTable(new Dictionary<string, string>(), language);
 }
