@@ -15,5 +15,12 @@ public static class DiExtensions
         services.AddScoped<ILanguageProvider, LanguageProvider>(_ => new LanguageProvider(options));
         return services;
     }
-    
+
+    public static IServiceCollection AddRestLocalization(this IServiceCollection services)
+    {
+        services.AddScoped<IAsyncLocalizationProvider, RestLocalizationProvider>();
+        services.AddScoped<ILocalizer, Localizer>();
+        services.AddScoped<ILanguageProvider, LanguageProvider>();
+        return services;
+    }
 }

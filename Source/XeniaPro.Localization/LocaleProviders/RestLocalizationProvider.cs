@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Options;
 using XeniaPro.Localization.Exceptions;
 using XeniaPro.Localization.LocaleTables;
 using XeniaPro.Localization.Models;
@@ -26,6 +27,12 @@ public class RestLocalizationProvider : IAsyncLocalizationProvider
     public RestLocalizationProvider(HttpClient client)
     {
         _client = client;
+    }
+
+    public RestLocalizationProvider(IOptions<RestLocalizationOptions> options)
+    {
+        _client = new HttpClient();
+        _client.BaseAddress = new Uri(options.Value.HostUri);
     }
 
     public ILocaleTable GetTableFor(Language language)

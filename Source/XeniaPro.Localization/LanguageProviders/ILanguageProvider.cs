@@ -7,7 +7,7 @@ public interface ILanguageProvider
 {
      Language CurrentLanguage { get; }
      
-     ICollection<Language> GetLanguages { get; }
+     ICollection<Language> Languages { get; }
 
      void SetLanguage(Language language);
 }

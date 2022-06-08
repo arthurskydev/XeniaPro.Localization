@@ -18,7 +18,7 @@ public class LanguageProviderTests
     [Test]
     public void DoesHaveLanguages()
     {
-        Assert.That(_provider.GetLanguages, Is.EquivalentTo(TestSetup.RestOptions.Languages));
+        Assert.That(_provider.Languages, Is.EquivalentTo(TestSetup.RestOptions.Languages));
     }
 
     [Test, Order(1)]
