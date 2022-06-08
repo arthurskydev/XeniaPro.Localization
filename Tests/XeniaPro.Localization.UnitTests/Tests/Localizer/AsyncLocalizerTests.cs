@@ -28,7 +28,7 @@ public class AsyncLocalizerTests
     [SetUp]
     public void Setup()
     {
-        var options = Options.Create(TestSetup.RestOptions);
+        var options = Options.Create(TestSetup.WebOptions);
         _languageProvider = new LanguageProviders.LanguageProvider(options);
         var localeProvider = new MockLocaliationProvider();
         _localizer = new AsyncLocalizer(localeProvider, _languageProvider);

@@ -11,10 +11,10 @@ namespace XeniaPro.Localization;
 public static class DiExtensions
 {
     public static IServiceCollection AddRestLocalization(this IServiceCollection services,
-        Action<RestLocalizationOptions> options)
+        Action<WebLocalizationOptions> options)
     {
         services.Configure(options);
-        services.AddScoped<IAsyncLocalizationProvider, RestLocalizationProvider>();
+        services.AddScoped<IAsyncLocalizationProvider, WebLocalizationProvider>();
         services.AddScoped<ILocalizer, AsyncLocalizer>();
         services.AddScoped<ILanguageProvider, LanguageProvider>();
         return services;
@@ -22,14 +22,14 @@ public static class DiExtensions
 
     public static IServiceCollection AddRestLocalization(this IServiceCollection services)
     {
-        services.AddScoped<IAsyncLocalizationProvider, RestLocalizationProvider>();
+        services.AddScoped<IAsyncLocalizationProvider, WebLocalizationProvider>();
         services.AddScoped<ILocalizer, AsyncLocalizer>();
         services.AddScoped<ILanguageProvider, LanguageProvider>();
         return services;
     }
 }
 
-public class RestLocalizationOptions
+public class WebLocalizationOptions
 {
     public string ResourceUrl { get; set; }
     public List<Language> Languages { get; set; }

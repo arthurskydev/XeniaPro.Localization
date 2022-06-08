@@ -14,20 +14,20 @@ public class LanguageProviderTests
     [SetUp]
     public void MsOptions()
     {
-        var options = Options.Create(TestSetup.RestOptions);
+        var options = Options.Create(TestSetup.WebOptions);
         _provider = new LanguageProviders.LanguageProvider(options);
     }
 
     [Test]
     public void DoesHaveLanguages()
     {
-        Assert.That(_provider.Languages, Is.EquivalentTo(TestSetup.RestOptions.Languages));
+        Assert.That(_provider.Languages, Is.EquivalentTo(TestSetup.WebOptions.Languages));
     }
 
     [Test, Order(1)]
     public void DoesSetDefaultLanguage()
     {
-        Assert.That(_provider.CurrentLanguage, Is.EqualTo(TestSetup.RestOptions.Languages.First()));
+        Assert.That(_provider.CurrentLanguage, Is.EqualTo(TestSetup.WebOptions.Languages.First()));
     }
 
     [Test, Order(2)]

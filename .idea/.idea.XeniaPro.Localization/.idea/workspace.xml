@@ -2,26 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8582a866-ded0-44d3-9e61-304fcfc6530b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/Localizers/AsyncLocalizer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProvider/LanguageProviderTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/Localizer/AsyncLocalizerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XeniaPro.Localization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XeniaPro.Localization/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/XeniaPro.Localization.Components.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/XeniaPro.Localization.Components.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/DiExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/DiExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LanguageProviders/LanguageProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/LanguageProviders/LanguageProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/IAsyncLocalizationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/IAsyncLocalizationProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/ILocalizationProvider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/RestLocalizationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/RestLocalizationProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleTables/LocaleTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleTables/LocaleTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/Localizers/Localizer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/Models/RestLocalizationOptions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/XeniaPro.Localization.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/XeniaPro.Localization.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/IAsyncLocalizationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/LocaleProviders/IAsyncLocalizationProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/RestLocalizationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/LocaleProviders/WebLocalizationProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Setup/TestSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Setup/TestSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProviderTests.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleTableTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleTable/LocaleTableTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/RestLocalizationProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/RestLocalizationProviderTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/XeniaPro.Localization.UnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/XeniaPro.Localization.UnitTests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProvider/LanguageProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProvider/LanguageProviderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/RestLocalizationProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/WebLocalizationProviderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/Localizer/AsyncLocalizerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/Localizer/AsyncLocalizerTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +22,13 @@
       <list>
         <option value="JSON File" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -78,17 +74,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Publish to folder.Publish XeniaPro.Localization.Components to folder">
     <configuration name="Publish XeniaPro.Localization to folder" type="DotNetFolderPublish" factoryName="Publish to folder" singleton="false">
       <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/Source/XeniaPro.Localization/bin/Release/net6.0/publish" target_framework="net6.0" uuid_high="3267639073411383563" uuid_low="-7949979558450583305" />
@@ -129,6 +125,7 @@
       <workItem from="1654690685680" duration="844000" />
       <workItem from="1654691567418" duration="7524000" />
       <workItem from="1654710433938" duration="4765000" />
+      <workItem from="1654726798579" duration="277000" />
     </task>
     <task id="LOCAL-00001" summary="yolo">
       <created>1654546904890</created>
@@ -187,59 +184,59 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 171/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 171/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 0% 88/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 171/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 0% 88/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 171/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 0% 88/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="RestLocalizationOptions 50% 2/4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 171/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 0% 88/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="DiExtensions 0% 9/9" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="RestLocalizationOptions 50% 2/4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Languages 100% 0/2" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 171/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 0% 88/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RestLocalizationOptions 0% 4/4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="RestLocalizationOptions 50% 2/4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 171/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 0% 88/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RestLocalizationOptions 0% 4/4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
           <item name="ResourceUrl 0% 2/2" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 36% 109/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Source 70% 26/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="XeniaPro.Localization 76% 20/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="DiExtensions 0% 9/9" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 171/171" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Source 0% 88/88" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="XeniaPro.Localization 0% 82/82" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="RestLocalizationOptions 0% 4/4" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Languages 0% 2/2" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -265,24 +262,5 @@
     <MESSAGE value="yolo" />
     <MESSAGE value="Features:&#10;Added configuration via Microsoft.Extensions.Configuration&#10;&#10;API Changes:&#10;Changed ILanguageProvider.GetLanguages property name to ILanguageProvider.Languages" />
     <option name="LAST_COMMIT_MESSAGE" value="Features:&#10;Added configuration via Microsoft.Extensions.Configuration&#10;&#10;API Changes:&#10;Changed ILanguageProvider.GetLanguages property name to ILanguageProvider.Languages" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/RestLocalizationProviderTests.cs</url>
-          <line>38</line>
-          <properties documentPath="C:\Users\arthur\Documents\GitHub\XeniaPro.Localization\Tests\XeniaPro.Localization.UnitTests\Tests\LocalizationProviderTests\RestLocalizationProviderTests.cs" initialLine="38" containingFunctionPresentation="method 'DoesUpdateAndProvideSet'">
-            <startOffsets>
-              <option value="1423" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1722" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

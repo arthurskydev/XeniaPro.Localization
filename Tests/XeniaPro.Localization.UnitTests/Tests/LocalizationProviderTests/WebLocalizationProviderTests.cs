@@ -6,10 +6,17 @@ using XeniaPro.Localization.UnitTests.Setup;
 
 namespace XeniaPro.Localization.UnitTests.Tests.LocalizationProviderTests;
 
-public class RestLocalizationProviderTests
+
+
+public class WebLocalizationProviderTests
 {
     private IAsyncLocalizationProvider _provider = null!;
 
+    private class TestProvider : WebLocalizationProvider
+    {
+        public TestProvider(HttpClient client) : base(client) { }
+    }
+    
     [SetUp]
     public void ProviderCustomClient()
     {
@@ -23,7 +30,7 @@ public class RestLocalizationProviderTests
         var mockClient = mockHttp.ToHttpClient();
         mockClient.BaseAddress = new Uri("http://localhost");
         mockClient.Timeout = TimeSpan.FromSeconds(1);
-        _provider = new RestLocalizationProvider(mockClient);
+        _provider = new TestProvider(mockClient);
     }
 
     [Test]

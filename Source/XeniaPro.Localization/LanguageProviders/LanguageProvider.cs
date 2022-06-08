@@ -21,7 +21,7 @@ public class LanguageProvider : ILanguageProvider
     private Language _currentLanguage;
     private readonly List<Language> _languages;
 
-    public LanguageProvider(IOptions<RestLocalizationOptions> options)
+    public LanguageProvider(IOptions<WebLocalizationOptions> options)
     {
         _languages = options.Value.Languages;
     }

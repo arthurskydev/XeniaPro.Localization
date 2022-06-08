@@ -11,18 +11,18 @@ using XeniaPro.Localization.Models;
 
 namespace XeniaPro.Localization.LocaleProviders;
 
-public class RestLocalizationProvider : IAsyncLocalizationProvider
+public class WebLocalizationProvider : IAsyncLocalizationProvider
 {
     private readonly List<ILocaleTable> _locales = new();
     private readonly HttpClient _client;
     private readonly object _lockObj = new();
 
-    public RestLocalizationProvider(HttpClient client)
+    protected WebLocalizationProvider(HttpClient client)
     {
         _client = client;
     }
 
-    public RestLocalizationProvider(IOptions<RestLocalizationOptions> options)
+    public WebLocalizationProvider(IOptions<WebLocalizationOptions> options)
     {
         _client = new HttpClient();
         _client.BaseAddress = new Uri(options.Value.ResourceUrl);

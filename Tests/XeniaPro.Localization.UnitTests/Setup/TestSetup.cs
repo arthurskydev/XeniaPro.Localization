@@ -5,9 +5,9 @@ namespace XeniaPro.Localization.UnitTests.Setup;
 
 public static class TestSetup
 {
-    private static RestLocalizationOptions? _options;
+    private static WebLocalizationOptions? _options;
 
-    public static RestLocalizationOptions RestOptions
+    public static WebLocalizationOptions WebOptions
     {
         get
         {
@@ -17,9 +17,9 @@ public static class TestSetup
             }
 
             var restOptionsJson = File.ReadAllText($"{Directory.GetCurrentDirectory()}/restOptions.json");
-            var restOptions = JsonSerializer.Deserialize<RestLocalizationOptions>(restOptionsJson);
+            var restOptions = JsonSerializer.Deserialize<WebLocalizationOptions>(restOptionsJson);
             _options = restOptions;
-            return RestOptions;
+            return WebOptions;
         }
     }
 
