@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Components;
-using XeniaPro.Localization.LocaleProviders;
-using XeniaPro.Localization.Localizers;
+using XeniaPro.Localization.Abstractions;
 
 namespace XeniaPro.Localization.Components;
 
@@ -11,6 +10,6 @@ public abstract class LocalizedComponentBase : ComponentBase
 
     protected override void OnInitialized()
     {
-        Provider.LanguagesUpdated += StateHasChanged;
+        Provider.LocalesUpdated += StateHasChanged;
     }
 }

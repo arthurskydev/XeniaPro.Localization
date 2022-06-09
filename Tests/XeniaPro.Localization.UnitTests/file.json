@@ -1,0 +1,14 @@
+{
+  "ResourcePath": "/",
+  "PlaceholderString": ".",
+  "Languages" : [
+    {
+      "Name" : "Deutsch",
+      "ShortHand" : "de"
+    },
+    {
+      "Name" : "English",
+      "ShortHand" : "en"
+    }
+  ]
+}

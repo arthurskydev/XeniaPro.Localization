@@ -1,26 +1,24 @@
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using XeniaPro.Localization.LanguageProviders;
-using XeniaPro.Localization.LocaleProviders;
-using XeniaPro.Localization.LocaleTables;
-using XeniaPro.Localization.Localizers;
-using XeniaPro.Localization.Models;
+using Moq;
+using XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Core.LanguageProviders;
+using XeniaPro.Localization.Core.LocaleTables;
+using XeniaPro.Localization.Core.Localizers;
 using XeniaPro.Localization.UnitTests.Setup;
 
 namespace XeniaPro.Localization.UnitTests.Tests;
 
-public class MockLocaliationProvider : IAsyncLocalizationProvider
+public class MockLocalizationProvider : ILocalizationProvider
 {
-    public event Action? LanguagesUpdated;
-
-    public ValueTask<ILocaleTable> GetTableAsync(Language language)
+    public ILocaleTable GetTable(Language language)
     {
         var dict = TestSetup.GetDictionary(language.ShortHand);
-        var table = new LocaleTable(dict, language);
-        return new ValueTask<ILocaleTable>(table);
+        return new LocaleTable(dict, language);
     }
 }
 
-public class AsyncLocalizerTests
+public class LocalizerTests
 {
     private ILocalizer _localizer = null!;
     private ILanguageProvider _languageProvider = null!;
@@ -29,9 +27,10 @@ public class AsyncLocalizerTests
     public void Setup()
     {
         var options = Options.Create(TestSetup.WebOptions);
-        _languageProvider = new LanguageProvider(options);
-        var localeProvider = new MockLocaliationProvider();
-        _localizer = new AsyncLocalizer(localeProvider, _languageProvider);
+        var logger = Mock.Of<ILogger<LanguageProvider>>();
+        _languageProvider = new LanguageProvider(options, logger);
+        var localeProvider = new MockLocalizationProvider();
+        _localizer = new Localizer(localeProvider, _languageProvider);
     }
 
     [Test]

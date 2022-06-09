@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeniaPro.Localization", "Source\XeniaPro.Localization\XeniaPro.Localization.csproj", "{2D58FC6C-B0DF-410B-91AB-FFB65EEFA8F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeniaPro.Localization.Core", "Source\XeniaPro.Localization.Core\XeniaPro.Localization.Core.csproj", "{2D58FC6C-B0DF-410B-91AB-FFB65EEFA8F7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{679F67DC-6CA9-4980-810F-8E1257D83E30}"
 EndProject
@@ -12,6 +12,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeniaPro.Localization.UnitTests", "Tests\XeniaPro.Localization.UnitTests\XeniaPro.Localization.UnitTests.csproj", "{2CB2BAC2-C42D-460C-8309-A51944C756E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeniaPro.Localization.Components", "Source\XeniaPro.Localization.Components\XeniaPro.Localization.Components.csproj", "{4DD63356-63F3-4E73-AC50-41597E30B6F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{8FF8F7D5-7454-48D7-A414-7D15DCA5A47D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeniaPro.Localization.Examples.BlazorWASM", "Examples\XeniaPro.Localization.Examples.BlazorWASM\XeniaPro.Localization.Examples.BlazorWASM.csproj", "{37EB31ED-8626-4E0C-BED8-6D06C605E81F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeniaPro.Localization.Web", "Source\XeniaPro.Localization.Web\XeniaPro.Localization.Web.csproj", "{78C2270F-C0B7-49A0-840D-9001664F8340}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeniaPro.Localization.Abstractions", "Source\XeniaPro.Localization.Abstractions\XeniaPro.Localization.Abstractions.csproj", "{3E8D995A-C179-48EB-A0AB-C76A14E325B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XeniaPro.Localization.Files", "Source\XeniaPro.Localization.Files\XeniaPro.Localization.Files.csproj", "{6310E2AB-39E8-4641-A140-F808DECE5B2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +44,30 @@ Global
 		{4DD63356-63F3-4E73-AC50-41597E30B6F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DD63356-63F3-4E73-AC50-41597E30B6F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DD63356-63F3-4E73-AC50-41597E30B6F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37EB31ED-8626-4E0C-BED8-6D06C605E81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37EB31ED-8626-4E0C-BED8-6D06C605E81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37EB31ED-8626-4E0C-BED8-6D06C605E81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37EB31ED-8626-4E0C-BED8-6D06C605E81F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78C2270F-C0B7-49A0-840D-9001664F8340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C2270F-C0B7-49A0-840D-9001664F8340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C2270F-C0B7-49A0-840D-9001664F8340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C2270F-C0B7-49A0-840D-9001664F8340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E8D995A-C179-48EB-A0AB-C76A14E325B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8D995A-C179-48EB-A0AB-C76A14E325B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8D995A-C179-48EB-A0AB-C76A14E325B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8D995A-C179-48EB-A0AB-C76A14E325B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6310E2AB-39E8-4641-A140-F808DECE5B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6310E2AB-39E8-4641-A140-F808DECE5B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6310E2AB-39E8-4641-A140-F808DECE5B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6310E2AB-39E8-4641-A140-F808DECE5B2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{2D58FC6C-B0DF-410B-91AB-FFB65EEFA8F7} = {679F67DC-6CA9-4980-810F-8E1257D83E30}
 		{2CB2BAC2-C42D-460C-8309-A51944C756E7} = {DDB690CD-E5B1-40DE-B08A-62B087896FB5}
 		{4DD63356-63F3-4E73-AC50-41597E30B6F1} = {679F67DC-6CA9-4980-810F-8E1257D83E30}
+		{37EB31ED-8626-4E0C-BED8-6D06C605E81F} = {8FF8F7D5-7454-48D7-A414-7D15DCA5A47D}
+		{78C2270F-C0B7-49A0-840D-9001664F8340} = {679F67DC-6CA9-4980-810F-8E1257D83E30}
+		{3E8D995A-C179-48EB-A0AB-C76A14E325B0} = {679F67DC-6CA9-4980-810F-8E1257D83E30}
+		{6310E2AB-39E8-4641-A140-F808DECE5B2B} = {679F67DC-6CA9-4980-810F-8E1257D83E30}
 	EndGlobalSection
 EndGlobal

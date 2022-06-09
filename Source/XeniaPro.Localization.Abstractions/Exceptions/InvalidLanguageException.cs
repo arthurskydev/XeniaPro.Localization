@@ -1,7 +1,4 @@
-using System;
-using XeniaPro.Localization.Models;
-
-namespace XeniaPro.Localization.Exceptions;
+namespace XeniaPro.Localization.Abstractions.Exceptions;
 
 public class InvalidLanguageException : Exception
 {

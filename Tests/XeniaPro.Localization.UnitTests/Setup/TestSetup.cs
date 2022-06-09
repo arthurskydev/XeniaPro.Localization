@@ -1,25 +1,43 @@
 using System.Text.Json;
-using XeniaPro.Localization.Models;
+using XeniaPro.Localization.Files;
+using XeniaPro.Localization.Web;
 
 namespace XeniaPro.Localization.UnitTests.Setup;
 
 public static class TestSetup
 {
-    private static WebLocalizationOptions? _options;
+    private static WebLocalizationOptions? _webOptions;
+    private static FileLocalizationOptions? _fileOptions;
 
     public static WebLocalizationOptions WebOptions
     {
         get
         {
-            if (_options is not null)
+            if (_webOptions is not null)
             {
-                return _options;
+                return _webOptions;
             }
 
-            var restOptionsJson = File.ReadAllText($"{Directory.GetCurrentDirectory()}/restOptions.json");
-            var restOptions = JsonSerializer.Deserialize<WebLocalizationOptions>(restOptionsJson);
-            _options = restOptions;
+            var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/web.json");
+            var webLocalization = JsonSerializer.Deserialize<WebLocalizationOptions>(json);
+            _webOptions = webLocalization;
             return WebOptions;
+        }
+    }
+    
+    public static FileLocalizationOptions FileOptions
+    {
+        get
+        {
+            if (_fileOptions is not null)
+            {
+                return _fileOptions;
+            }
+
+            var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/file.json");
+            var fileOptions = JsonSerializer.Deserialize<FileLocalizationOptions>(json);
+            _fileOptions = fileOptions;
+            return FileOptions;
         }
     }
 

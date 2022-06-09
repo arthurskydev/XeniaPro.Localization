@@ -1,5 +1,6 @@
 {
-  "HostUrl": "http://localhost",
+  "ResourceUrl": "http://localhost",
+  "PlaceholderString": ".",
   "Languages" : [
     {
       "Name" : "Deutsch",

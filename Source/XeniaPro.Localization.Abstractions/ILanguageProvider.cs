@@ -1,10 +1,9 @@
-using System.Collections.Generic;
-using XeniaPro.Localization.Models;
-
-namespace XeniaPro.Localization.LanguageProviders;
+namespace XeniaPro.Localization.Abstractions;
 
 public interface ILanguageProvider
 {
+     event Action LanguageUpdated;
+     
      Language CurrentLanguage { get; }
      
      ICollection<Language> Languages { get; }

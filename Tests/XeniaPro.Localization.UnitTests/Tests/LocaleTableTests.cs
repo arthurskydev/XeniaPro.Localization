@@ -1,5 +1,5 @@
-using XeniaPro.Localization.LocaleTables;
-using XeniaPro.Localization.Models;
+using XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Core.LocaleTables;
 using XeniaPro.Localization.UnitTests.Setup;
 
 namespace XeniaPro.Localization.UnitTests.Tests;

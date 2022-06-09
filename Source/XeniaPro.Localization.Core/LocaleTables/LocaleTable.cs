@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using XeniaPro.Localization.Models;
+using XeniaPro.Localization.Abstractions;
 
-namespace XeniaPro.Localization.LocaleTables;
+namespace XeniaPro.Localization.Core.LocaleTables;
 
 public class LocaleTable : ILocaleTable
 {

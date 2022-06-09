@@ -1,7 +1,9 @@
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using XeniaPro.Localization.Exceptions;
-using XeniaPro.Localization.LanguageProviders;
-using XeniaPro.Localization.Models;
+using Moq;
+using XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Abstractions.Exceptions;
+using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.UnitTests.Setup;
 
 namespace XeniaPro.Localization.UnitTests.Tests;
@@ -14,8 +16,9 @@ public class LanguageProviderTests
     [SetUp]
     public void MsOptions()
     {
+        var logger = Mock.Of<ILogger<LanguageProvider>>();
         var options = Options.Create(TestSetup.WebOptions);
-        _provider = new LanguageProviders.LanguageProvider(options);
+        _provider = new LanguageProvider(options, logger);
     }
 
     [Test]
