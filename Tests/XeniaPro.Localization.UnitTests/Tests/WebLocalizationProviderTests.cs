@@ -4,7 +4,7 @@ using XeniaPro.Localization.LocaleProviders;
 using XeniaPro.Localization.Models;
 using XeniaPro.Localization.UnitTests.Setup;
 
-namespace XeniaPro.Localization.UnitTests.Tests.LocalizationProviderTests;
+namespace XeniaPro.Localization.UnitTests.Tests;
 
 
 

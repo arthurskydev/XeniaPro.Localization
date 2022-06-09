@@ -7,7 +7,7 @@
     <StartupObject />
     <Configurations>Debug;Release;Local</Configurations>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <PackageVersion>0.0.3</PackageVersion>
+    <PackageVersion>0.0.4</PackageVersion>
     <Title>Xenia Pro Localization</Title>
     <Copyright>All Rights Reserved (c) Xenia Pro GmbH</Copyright>
   </PropertyGroup>

@@ -6,7 +6,7 @@ using XeniaPro.Localization.Localizers;
 using XeniaPro.Localization.Models;
 using XeniaPro.Localization.UnitTests.Setup;
 
-namespace XeniaPro.Localization.UnitTests.Tests.Localizer;
+namespace XeniaPro.Localization.UnitTests.Tests;
 
 public class MockLocaliationProvider : IAsyncLocalizationProvider
 {
@@ -29,7 +29,7 @@ public class AsyncLocalizerTests
     public void Setup()
     {
         var options = Options.Create(TestSetup.WebOptions);
-        _languageProvider = new LanguageProviders.LanguageProvider(options);
+        _languageProvider = new LanguageProvider(options);
         var localeProvider = new MockLocaliationProvider();
         _localizer = new AsyncLocalizer(localeProvider, _languageProvider);
     }
@@ -37,7 +37,6 @@ public class AsyncLocalizerTests
     [Test]
     [TestCase("Deutsch", "de")]
     [TestCase("English", "en")]
-
     public void GetFromBracketsOverload(string langName, string langShort)
     {
         var lang = new Language(langName, langShort);

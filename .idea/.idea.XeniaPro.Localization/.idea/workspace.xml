@@ -3,14 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8582a866-ded0-44d3-9e61-304fcfc6530b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XeniaPro.Localization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XeniaPro.Localization/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/DiExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/DiExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LanguageProviders/LanguageProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/LanguageProviders/LanguageProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/IAsyncLocalizationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/LocaleProviders/IAsyncLocalizationProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/RestLocalizationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/LocaleProviders/WebLocalizationProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Setup/TestSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Setup/TestSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProvider/LanguageProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProvider/LanguageProviderTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/RestLocalizationProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/WebLocalizationProviderTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/Localizer/AsyncLocalizerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/Localizer/AsyncLocalizerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/XeniaPro.Localization.Components.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/XeniaPro.Localization.Components.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/XeniaPro.Localization.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization/XeniaPro.Localization.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProvider/LanguageProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProviderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleTable/LocaleTableTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleTableTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizationProviderTests/WebLocalizationProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/WebLocalizationProviderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/Localizer/AsyncLocalizerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/AsyncLocalizerTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Publish to folder.Publish XeniaPro.Localization.Components to folder">
+  <component name="RunManager" selected="Publish to folder.Publish XeniaPro.Localization to folder">
     <configuration name="Publish XeniaPro.Localization to folder" type="DotNetFolderPublish" factoryName="Publish to folder" singleton="false">
       <riderPublish configuration="Release" platform="Any CPU" runtime="Portable" target_folder="$PROJECT_DIR$/Source/XeniaPro.Localization/bin/Release/net6.0/publish" target_framework="net6.0" uuid_high="3267639073411383563" uuid_low="-7949979558450583305" />
       <method v="2" />
@@ -126,6 +124,8 @@
       <workItem from="1654691567418" duration="7524000" />
       <workItem from="1654710433938" duration="4765000" />
       <workItem from="1654726798579" duration="277000" />
+      <workItem from="1654727963199" duration="513000" />
+      <workItem from="1654776447297" duration="386000" />
     </task>
     <task id="LOCAL-00001" summary="yolo">
       <created>1654546904890</created>
@@ -259,8 +259,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="add test project and rearange directory structure" />
     <MESSAGE value="add unversioned files" />
-    <MESSAGE value="yolo" />
     <MESSAGE value="Features:&#10;Added configuration via Microsoft.Extensions.Configuration&#10;&#10;API Changes:&#10;Changed ILanguageProvider.GetLanguages property name to ILanguageProvider.Languages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Features:&#10;Added configuration via Microsoft.Extensions.Configuration&#10;&#10;API Changes:&#10;Changed ILanguageProvider.GetLanguages property name to ILanguageProvider.Languages" />
+    <MESSAGE value="yolo" />
+    <option name="LAST_COMMIT_MESSAGE" value="yolo" />
   </component>
 </project>
