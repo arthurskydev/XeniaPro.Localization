@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.5" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Source\XeniaPro.Localization.Components\XeniaPro.Localization.Components.csproj" />
+      <ProjectReference Include="..\..\Source\XeniaPro.Localization.Core\XeniaPro.Localization.Core.csproj" />
+      <ProjectReference Include="..\..\Source\XeniaPro.Localization.Web\XeniaPro.Localization.Web.csproj" />
+    </ItemGroup>
+
+</Project>

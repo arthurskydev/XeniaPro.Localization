@@ -1,0 +1,17 @@
+﻿@inherits LocalizedComponentBase
+@inject ILanguageProvider LanguageProvider
+@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>@Localizer["HelloWorld"]</h1>
+<select>
+    @foreach (var lang in LanguageProvider.Languages)
+    {
+        <option @onclick="() => LanguageProvider.SetLanguage(lang)">@lang</option>
+    }
+</select>
+
+@Localizer["Welcome"]
+
+<SurveyPrompt Title="@Localizer["HowIsBlazor"]" />
