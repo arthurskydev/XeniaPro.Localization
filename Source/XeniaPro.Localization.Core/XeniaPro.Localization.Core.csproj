@@ -9,23 +9,21 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageVersion>0.0.5</PackageVersion>
     <Title>Simple .Net library that gets localized strings from JSON files</Title>
-    <Copyright>MIT License  Copyright (c) 2022 XeniaPro GmbH  Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</Copyright>
+    <Copyright>Copyright (c) 2022 XeniaPro GmbH</Copyright>
     <Authors>Arthur Meeh</Authors>
     <Description>Simple .Net library that gets localized strings from JSON files</Description>
     <RepositoryUrl>https://github.com/arthurskydev/XeniaPro.Localization</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>Localization,Globalization,Internationalization,Blazor</PackageTags>
     <PackageIcon>Xenia_Logotype_Square512.png</PackageIcon>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/arthurskydev/XeniaPro.Localization/add-license-1/license</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\XeniaPro.Localization.Abstractions\XeniaPro.Localization.Abstractions.csproj" />
   </ItemGroup>
 
   <ItemGroup>
