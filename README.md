@@ -154,6 +154,6 @@ Feature requests are appreciated and might be implemented if demand is there.
 You have time to spare? Sure do a pull request! But please tell me what you are working on beforehand.
 
 ## Contact
-<a href="https://discordapp.com/users/764794958955544586/">
+<a href="https://discordapp.com/users/764794958955544586/" title="arthursky#9413">
     <img src="https://brandslogos.com/wp-content/uploads/thumbs/discord-logo-vector.svg" alt="discord-logo" width="50"/>
 </a>
