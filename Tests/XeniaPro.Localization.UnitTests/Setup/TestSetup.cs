@@ -1,5 +1,6 @@
 using System.Text.Json;
 using XeniaPro.Localization.Core;
+using XeniaPro.Localization.Core.Options;
 using XeniaPro.Localization.Files;
 using XeniaPro.Localization.Web;
 
@@ -18,7 +19,7 @@ public static class TestSetup
                 return _options;
             }
 
-            var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/web.json");
+            var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/options.json");
             var options = JsonSerializer.Deserialize<LocalizationOptions>(json);
             _options = options;
             return Options;

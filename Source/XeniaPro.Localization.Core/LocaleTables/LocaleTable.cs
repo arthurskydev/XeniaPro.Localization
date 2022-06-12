@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Core.LocaleIItems;
 
 namespace XeniaPro.Localization.Core.LocaleTables;
 
@@ -12,7 +13,7 @@ public class LocaleTable : ILocaleTable
     public LocaleTable(Dictionary<string, string> stringCollection, Language language)
     {
         StringCollection = (from item in stringCollection
-                            select LocaleItemFactory.FromKeyValuePair(item)).ToList();
+                            select LocaleItemFactory.CreateFromKeyValue(item.Key, item.Value)).ToList();
         Language = language;
     }
 

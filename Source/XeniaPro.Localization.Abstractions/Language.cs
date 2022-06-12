@@ -1,5 +1,3 @@
-using System.ComponentModel;
-
 namespace XeniaPro.Localization.Abstractions;
 
 public record Language

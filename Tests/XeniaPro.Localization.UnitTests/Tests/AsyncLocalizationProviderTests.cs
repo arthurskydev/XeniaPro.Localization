@@ -1,5 +1,5 @@
 using XeniaPro.Localization.Abstractions;
-using XeniaPro.Localization.Abstractions.Exceptions;
+using XeniaPro.Localization.Core.Exceptions;
 using XeniaPro.Localization.UnitTests.Setup;
 
 namespace XeniaPro.Localization.UnitTests.Tests;

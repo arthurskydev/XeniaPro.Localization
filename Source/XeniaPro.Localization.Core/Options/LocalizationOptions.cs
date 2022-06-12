@@ -1,9 +1,7 @@
-using System;
 using System.Collections.Generic;
-using Microsoft.Extensions.DependencyInjection;
 using XeniaPro.Localization.Abstractions;
 
-namespace XeniaPro.Localization.Core;
+namespace XeniaPro.Localization.Core.Options;
 
 public class LocalizationOptions
 {

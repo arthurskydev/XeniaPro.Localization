@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using XeniaPro.Localization.Abstractions;
-using XeniaPro.Localization.Abstractions.Exceptions;
+using XeniaPro.Localization.Core.Exceptions;
 using XeniaPro.Localization.Core.LocaleTables;
 
 namespace XeniaPro.Localization.Files;

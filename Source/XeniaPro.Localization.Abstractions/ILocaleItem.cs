@@ -4,5 +4,5 @@ public interface ILocaleItem
 {
     string Key { get; }
     string GetString();
-    string GetString(string secondaryKey);
+    string GetString(params string[] args);
 }

@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using XeniaPro.Localization.Abstractions;
 using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.Core.Localizers;
+using XeniaPro.Localization.Core.Options;
 
 namespace XeniaPro.Localization.Core;
 

@@ -1,6 +1,7 @@
+using System;
 using XeniaPro.Localization.Abstractions;
 
-namespace XeniaPro.Localization.Core.LocaleTables;
+namespace XeniaPro.Localization.Core.LocaleIItems;
 
 public readonly struct InvalidLocaleItem : ILocaleItem
 {
@@ -14,6 +15,6 @@ public readonly struct InvalidLocaleItem : ILocaleItem
     public string GetString()
         => string.Empty;
 
-    public string GetString(string secondaryKey)
+    public string GetString(params string[] args)
         => string.Empty;
 }

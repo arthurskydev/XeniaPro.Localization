@@ -8,42 +8,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8582a866-ded0-44d3-9e61-304fcfc6530b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocaleItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/DiExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/ComplexLocaleItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/InvalidLocaleItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/LocaleItemFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/PlainLocaleItem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Options/LocalizationOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Files/LocalizationOptionsExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Web/LocalizationOptionsExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Exceptions/InvalidStringInterpolationException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleItemFactoryTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XeniaPro.Localization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XeniaPro.Localization/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Pages/Index.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Shared/MainLayout.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Shared/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/wwwroot/locales/de.json" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/wwwroot/locales/de.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/wwwroot/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/wwwroot/locales/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocaleTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocaleTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocalizationOptions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocalizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocalizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/Exceptions/InvalidLanguageException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Exceptions/InvalidLanguageException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/Exceptions/TableDoesNotExistException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Exceptions/TableDoesNotExistException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocaleItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocaleItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/Language.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/Language.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/LocalizedComponentBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/LocalizedComponentBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/DiExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/DiExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LanguageProviders/LanguageProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LanguageProviders/LanguageProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/ComplexLocaleItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleIItems/ComplexLocaleItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/InvalidLocaleItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleIItems/InvalidLocaleItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/LocaleItemFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleIItems/LocaleItemFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/LocaleTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/LocaleTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/PlainLocaleItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleIItems/PlainLocaleItem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Localizers/Localizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Localizers/Localizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Options/LocalizationOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Options/LocalizationOptions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/XeniaPro.Localization.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/XeniaPro.Localization.Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Files/DiExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Web/DiExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Files/FileLocalizationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Files/FileLocalizationProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Web/WebLocalizationProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Web/WebLocalizationProvider.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Setup/TestSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Setup/TestSetup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/AsyncLocalizationProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/AsyncLocalizationProviderTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/FileLocalizationProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/FileLocalizationProviderTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProviderTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleTableTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleTableTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizerTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/XeniaPro.Localization.UnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/XeniaPro.Localization.UnitTests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/file.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/options.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/web.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,38 +51,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b046e286a344b85999e7c798bc1fc145e00/1f/e78adfba/MockHttpMessageHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/66769cbfeae14a56a4cf5a826836f68d83488/da/8a83c510/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/aaaefdf6d8ba49648b565fcd9ee5ac1d3da90/1d/804d3c57/Uri.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/aaaefdf6d8ba49648b565fcd9ee5ac1d3da90/5d/7fd414f4/UriHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/145837ceeabac303f80aa7e48d8de10b6b2e03ed06861b2443686f93c4147da/HttpClientJsonExtensions.Get.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1af51483c9bf18871cce649b9f966dd7be686536f998c33bba3c5fc4adea4a0/Task.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e8feaadf5c3fa14d36ea2a638c432a2e1a47b7837d8b83d88303c5d9c15cf/AsyncValueTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2092594986cef463403359ef7a2b70c093702cde2d09da41faa694648726f8c/ThreadPoolWorkQueue.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/27b91272f348469b8fccc471c1ccd767f57a64f55a44975790bfae805b4ebb/Future.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/377e91d7ed75931c14e7e44ff9bbd28aab526bde89b36eb6a19668835fc09e/PortableThreadPool.WorkerThread.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3e3fb5b4de57b78caaf18cfaa0f6155773d67b4f5698b7cdfe39cee3ec3df1/TaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea95343b9387b73062a9b61b7538f826c54ce3529632b4472ba4494044d23/AsyncTaskMethodBuilderT.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/48c3d3e27a3992b5816511af754196140ae50726131f3e6f6bdbf4a339e8364/Assert.Exceptions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5eaf6f9dd55429069729b5d6a6b99c1571fb63cf5689bed62ef241e99e88d7/TaskCompletionSource_T.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5fc3c421882a4cf46961b0e3d388fdd679167842182de786f47ae2be28eb/ThreadPool.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/732a3ff679450a837fc08eaccb7fabe4f5602b49befb51bc8369197e06bb6/Buffer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/745b68ad7a384fa253a38162221d5f987ce7476e5e42a3d0e331bd7eef766418/PortableThreadPool.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/46a322d26154b982566e1817203e5452c91223f93b0e392d9c5b4806696fdc1/Assert.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/974fa14c57bab8fe29f1bddd39b1a6548b9cc8cf9e0ef5e670c2407a56d9/String.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/999149dd7f62d844e3ed696d880a872352f8f775ea58b51030c7b360ddb/HttpRequestMessage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b2c3e28468b2a9ae5485968818c48fd40338a6b8ae1295f29a355225a8d238/First.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c07a1d303f6388b4f360b66d3f1df41ba410cfc473175f62e1d9740aac986/LowLevelLifoSemaphore.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c1da7b6c7c71a954fe3eb2531c6476711b3e6d93a8d76795386d326bb9dbc/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c6ad457575d35dcbff26c9a5e3fb1d92f1d3c55f25ef6ebf475367b5d8/List.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ca860fea1234fdab4474cfa1911d325a886a3e2e7692197955e531a9eb8e081/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cf91eb35ab781c324ad4fa382dce85631ec37cf3813529f7c92208d866c851/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/df71358f7b7337a1eee3a65abe6d678dd9a065e256b8cc3fd44a2949754/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e0966dc63699861af122d851f53ec41738f7e6baa7e95e5d481f74612b1e814/ConcurrentQueueSegment.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e329bd4f14a42c5f6951d92d29ba7796e511d77e6a35ab20a5a38f50ba6fd74/HttpResponseMessage.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e7e231682be8652744726acc6de35323daa68061429db55e0c251114902f60/String.Manipulation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f0db988daf92f8d24bf9dccdd2fd9fd3238ef4e5dc5c7b12bd4b837a64ae/Version.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f833e5784f5b87eab13492bce4877364ff40cea6a19077f3ce48ccf7c1a37/LowLevelLifoSemaphore.Windows.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f8ca84d3d159b4baf88edb942846b03461b59279c70f1399fe02cc1a280c8a1/ThreadPoolTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bd6261fae937ba8f9a94e40e09319529f8a77ea7c5438cb971c868a26cb986/Select.SpeedOpt.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d9d9faea5e6ed6438a777ef8c6eed41261f81d8e86488ed923ad92564f54e/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Localizers/Localizer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -228,6 +186,7 @@
       <workItem from="1654859479672" duration="1729000" />
       <workItem from="1654872061573" duration="6332000" />
       <workItem from="1654893144104" duration="5500000" />
+      <workItem from="1655038478245" duration="12987000" />
     </task>
     <task id="LOCAL-00001" summary="yolo">
       <created>1654546904890</created>
@@ -380,5 +339,12 @@
     <MESSAGE value="Divided into Core / Abstractions + Web + File projects" />
     <MESSAGE value="Added example project" />
     <option name="LAST_COMMIT_MESSAGE" value="Added example project" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Frame#XeniaPro.Localization.Core.LocaleIItems.LocaleItemFactory+&lt;&gt;c__DisplayClass0_0.&lt;CreateFromKeyValue&gt;b__4" memberName="substr" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

@@ -1,6 +1,7 @@
 using System.Linq;
 using Microsoft.Extensions.Options;
 using XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Core.Options;
 
 namespace XeniaPro.Localization.Core.Localizers;
 

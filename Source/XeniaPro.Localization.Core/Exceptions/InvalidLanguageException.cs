@@ -1,4 +1,7 @@
-namespace XeniaPro.Localization.Abstractions.Exceptions;
+using System;
+using XeniaPro.Localization.Abstractions;
+
+namespace XeniaPro.Localization.Core.Exceptions;
 
 public class InvalidLanguageException : Exception
 {

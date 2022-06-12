@@ -2,7 +2,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Moq;
 using XeniaPro.Localization.Abstractions;
-using XeniaPro.Localization.Abstractions.Exceptions;
+using XeniaPro.Localization.Core.Exceptions;
 using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.UnitTests.Setup;
 
@@ -35,6 +35,7 @@ public class LanguageProviderTests
 
     [Test, Order(2)]
     [TestCase("English", "en")]
+    [TestCase("Deutsch", "de")]
     public void DoesSetLanguage(string name, string shortName)
     {
         var language = new Language(name, shortName);
