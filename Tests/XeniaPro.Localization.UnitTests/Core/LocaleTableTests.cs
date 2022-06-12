@@ -1,4 +1,5 @@
-using XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Core.Interfaces;
+using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.Core.LocaleTables;
 using XeniaPro.Localization.UnitTests.Setup;
 

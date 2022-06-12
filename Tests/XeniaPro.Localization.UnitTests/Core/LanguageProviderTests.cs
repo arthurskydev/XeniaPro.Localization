@@ -1,8 +1,8 @@
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Moq;
-using XeniaPro.Localization.Abstractions;
 using XeniaPro.Localization.Core.Exceptions;
+using XeniaPro.Localization.Core.Interfaces;
 using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.UnitTests.Setup;
 

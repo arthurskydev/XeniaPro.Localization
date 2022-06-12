@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
-using XeniaPro.Localization.Abstractions;
 using XeniaPro.Localization.Core;
+using XeniaPro.Localization.Core.Interfaces;
 
 namespace XeniaPro.Localization.Files;
 

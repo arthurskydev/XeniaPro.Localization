@@ -1,4 +1,6 @@
-namespace XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Core.LanguageProviders;
+
+namespace XeniaPro.Localization.Core.Interfaces;
 
 public interface ILocaleTable
 {

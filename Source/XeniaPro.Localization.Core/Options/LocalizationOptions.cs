@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Core.LanguageProviders;
 
 namespace XeniaPro.Localization.Core.Options;
 

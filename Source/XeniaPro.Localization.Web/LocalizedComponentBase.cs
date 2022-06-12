@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Components;
-using XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Core.Interfaces;
 
 namespace XeniaPro.Localization.Web;
 

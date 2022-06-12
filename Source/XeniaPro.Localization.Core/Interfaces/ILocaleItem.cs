@@ -1,4 +1,4 @@
-namespace XeniaPro.Localization.Abstractions;
+namespace XeniaPro.Localization.Core.Interfaces;
 
 public interface ILocaleItem
 {

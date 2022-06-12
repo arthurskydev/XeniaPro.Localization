@@ -1,4 +1,7 @@
-namespace XeniaPro.Localization.Abstractions;
+using System;
+using System.Linq;
+
+namespace XeniaPro.Localization.Core.LanguageProviders;
 
 public record Language(string Name, string ShortHand)
 {

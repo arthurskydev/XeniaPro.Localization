@@ -1,4 +1,6 @@
-namespace XeniaPro.Localization.Abstractions;
+using System;
+
+namespace XeniaPro.Localization.Core.Interfaces;
 
 public interface IAsyncLocalizationProvider : ILocalizationProvider
 {

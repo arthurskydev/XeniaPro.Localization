@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using XeniaPro.Localization.Abstractions;
 using XeniaPro.Localization.Core.Exceptions;
+using XeniaPro.Localization.Core.Interfaces;
 
 namespace XeniaPro.Localization.Core.LocaleIItems;
 

@@ -1,8 +1,7 @@
 using System.Linq;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using XeniaPro.Localization.Abstractions;
-using XeniaPro.Localization.Core.LocaleIItems;
+using XeniaPro.Localization.Core.Interfaces;
 using XeniaPro.Localization.Core.Options;
 
 namespace XeniaPro.Localization.Core.Localizers;

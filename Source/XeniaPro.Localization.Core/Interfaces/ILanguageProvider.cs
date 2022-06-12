@@ -1,4 +1,8 @@
-namespace XeniaPro.Localization.Abstractions;
+using System;
+using System.Collections.Generic;
+using XeniaPro.Localization.Core.LanguageProviders;
+
+namespace XeniaPro.Localization.Core.Interfaces;
 
 public interface ILanguageProvider
 {

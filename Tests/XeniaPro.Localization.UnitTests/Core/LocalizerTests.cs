@@ -1,7 +1,8 @@
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
 using Moq;
-using XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Core.Interfaces;
 using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.Core.LocaleTables;
 using XeniaPro.Localization.Core.Localizers;
@@ -30,7 +31,7 @@ public class LocalizerTests
         var logger = Mock.Of<ILogger<LanguageProvider>>();
         _languageProvider = new LanguageProvider(options, logger);
         var localeProvider = new MockLocalizationProvider();
-        _localizer = new Localizer(localeProvider, _languageProvider, options);
+        _localizer = new Localizer(localeProvider, _languageProvider, options, NullLogger<Localizer>.Instance);
     }
 
     [Test]

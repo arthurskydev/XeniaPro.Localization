@@ -1,4 +1,4 @@
-using XeniaPro.Localization.Abstractions;
+using XeniaPro.Localization.Core.Interfaces;
 
 namespace XeniaPro.Localization.Core.LocaleIItems;
 

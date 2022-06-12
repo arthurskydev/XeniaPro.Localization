@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using XeniaPro.Localization.Abstractions;
 using XeniaPro.Localization.Core;
+using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.Examples.BlazorWASM;
 using XeniaPro.Localization.Web;
 
