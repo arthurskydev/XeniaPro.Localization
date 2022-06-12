@@ -12,15 +12,26 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 builder.Services.AddXeniaLocalization(options =>
 {
+    // If the locale string can not be found use this value instead. A "." would pass the key through.
     options.PlaceholderString = "";
+
+    /*
+     * Preferably load this from a configuration file.
+     * 
+     * The fist language will be picked as default.
+     *
+     * Make sure to manually cache the selected language on your client.
+     */
     options.Languages = new List<Language>
     {
-        new Language("Deutsch", "de"),
-        new Language("English", "en")
+        "de-DE, de",
+        "en-EN, en"
     };
-    options.UseWebLocalization(configureOptions =>
+
+    options.UseWebLocalization(webOptions =>
     {
-        configureOptions.ResourceUrl = $"{builder.HostEnvironment.BaseAddress}/locales/";
+        // Place your locale files in a directory "locales" in "wwwroot".
+        webOptions.ResourceUrl = $"{builder.HostEnvironment.BaseAddress}/locales/";
     });
 });
 

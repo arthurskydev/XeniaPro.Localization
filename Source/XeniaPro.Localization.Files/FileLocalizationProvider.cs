@@ -7,92 +7,38 @@ using XeniaPro.Localization.Core.LocaleTables;
 
 namespace XeniaPro.Localization.Files;
 
-public class FileLocalizationProvider : IAsyncLocalizationProvider
+public class FileLocalizationProvider : ILocalizationProvider
 {
     private readonly string _resourcePath;
     private readonly ILogger<FileLocalizationProvider> _logger;
-    private readonly object _lockObj = new();
+    private readonly ILanguageProvider _language;
 
-    private enum TableStatus
-    {
-        Loading,
-        Loaded,
-        Failed
-    }
+    private readonly List<ILocaleTable> _tables;
 
-    private record LocaleTableContainer(TableStatus Status, Exception TableException, ILocaleTable Table);
-
-    private readonly List<LocaleTableContainer> _locales = new();
-
-    public event Action LocalesUpdated;
-
-    public FileLocalizationProvider(IOptions<FileLocalizationOptions> options, ILogger<FileLocalizationProvider> logger)
+    public FileLocalizationProvider(IOptions<FileLocalizationOptions> options, ILogger<FileLocalizationProvider> logger,
+        ILanguageProvider language)
     {
         _logger = logger;
+        _language = language;
         _resourcePath = options.Value.ResourcePath;
+
+        _tables = Task.Run(LoadTables).Result;
+    }
+
+    private async Task<List<ILocaleTable>> LoadTables()
+    {
+        var tables = new List<ILocaleTable>();
+        foreach (var language in _language.Languages)
+        {
+            var path = new Uri(_resourcePath + language.ShortHand + ".json");
+            await using var fs = File.OpenRead(path.AbsolutePath);
+            var strings = await JsonSerializer.DeserializeAsync<Dictionary<string, string>>(fs);
+            tables.Add(new LocaleTable(strings, language));
+        }
+
+        return tables;
     }
 
     public ILocaleTable GetTable(Language language)
-    {
-        LocaleTableContainer container;
-
-        lock (_lockObj)
-        {
-            container = _locales.Find(x => x.Table.Language == language);
-        }
-
-        if (container is null)
-        {
-            container = new LocaleTableContainer(TableStatus.Loading, null, LocaleTable.CreateEmpty(language));
-            lock (_lockObj)
-            {
-                _locales.Add(container);
-            }
-
-            Task.Run(() => LoadTable(language));
-            return container.Table;
-        }
-
-        if (container.Status != TableStatus.Failed)
-            return container.Table;
-
-        throw container.TableException;
-    }
-
-    private async Task LoadTable(Language language)
-    {
-        try
-        {
-            var path = new Uri(Directory.GetCurrentDirectory() + _resourcePath + $"{language.ShortHand}.json");
-            if (!File.Exists(path.AbsolutePath))
-            {
-                throw new TableDoesNotExistException(language);
-            }
-            
-            await using var fs =  File.OpenRead(path.AbsolutePath);
-            var strings = await JsonSerializer.DeserializeAsync<Dictionary<string, string>>(fs);
-            var containerObj = new LocaleTableContainer(TableStatus.Loaded, null, new LocaleTable(strings, language));
-            lock (_lockObj)
-            {
-                var container = _locales.Find(x => x.Table.Language == language);
-                _locales.Remove(container);
-                _locales.Add(containerObj);
-            }
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Exception was thrown while fetching {Language}", language);
-            var containerObj = new LocaleTableContainer(TableStatus.Failed, ex, LocaleTable.CreateEmpty(language));
-            lock (_lockObj)
-            {
-                var container = _locales.Find(x => x.Table.Language == language);
-                _locales.Remove(container);
-                _locales.Add(containerObj);
-            }
-        }
-        finally
-        {
-            LocalesUpdated?.Invoke();
-        }
-    }
+        => _tables.Find(x => x.Language == language) ?? throw new TableDoesNotExistException(language);
 }

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components;
 using XeniaPro.Localization.Abstractions;
 
-namespace XeniaPro.Localization.Components;
+namespace XeniaPro.Localization.Web;
 
 public abstract class LocalizedComponentBase : ComponentBase
 {

@@ -12,7 +12,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Source\XeniaPro.Localization.Components\XeniaPro.Localization.Components.csproj" />
       <ProjectReference Include="..\..\Source\XeniaPro.Localization.Core\XeniaPro.Localization.Core.csproj" />
       <ProjectReference Include="..\..\Source\XeniaPro.Localization.Web\XeniaPro.Localization.Web.csproj" />
     </ItemGroup>

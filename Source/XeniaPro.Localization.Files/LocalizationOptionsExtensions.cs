@@ -14,7 +14,6 @@ public static class LocalizationOptionsExtensions
             services.Configure(configureOptions);
             services.AddScoped<FileLocalizationProvider>();
             services.AddScoped<ILocalizationProvider>(p => p.GetRequiredService<FileLocalizationProvider>());
-            services.AddScoped<IAsyncLocalizationProvider>(p => p.GetRequiredService<FileLocalizationProvider>());
         };
 
         return options;
@@ -26,7 +25,6 @@ public static class LocalizationOptionsExtensions
         {
             services.AddScoped<FileLocalizationProvider>();
             services.AddScoped<ILocalizationProvider>(p => p.GetRequiredService<FileLocalizationProvider>());
-            services.AddScoped<IAsyncLocalizationProvider>(p => p.GetRequiredService<FileLocalizationProvider>());
         };
 
         return options;
