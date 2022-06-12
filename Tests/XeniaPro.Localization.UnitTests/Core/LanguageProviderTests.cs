@@ -6,7 +6,7 @@ using XeniaPro.Localization.Core.Exceptions;
 using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.UnitTests.Setup;
 
-namespace XeniaPro.Localization.UnitTests.Tests;
+namespace XeniaPro.Localization.UnitTests.Core;
 
 [TestFixture]
 public class LanguageProviderTests

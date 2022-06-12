@@ -2,9 +2,9 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Moq;
 using XeniaPro.Localization.Files;
-using XeniaPro.Localization.UnitTests.Setup;
+using XeniaPro.Localization.UnitTests.Core;
 
-namespace XeniaPro.Localization.UnitTests.Tests;
+namespace XeniaPro.Localization.UnitTests.Files;
 
 public class FileLocalizationProviderTests : AsyncLocalizationProviderTests
 {

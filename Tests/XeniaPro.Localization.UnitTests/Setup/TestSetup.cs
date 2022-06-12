@@ -1,8 +1,5 @@
 using System.Text.Json;
-using XeniaPro.Localization.Core;
 using XeniaPro.Localization.Core.Options;
-using XeniaPro.Localization.Files;
-using XeniaPro.Localization.Web;
 
 namespace XeniaPro.Localization.UnitTests.Setup;
 

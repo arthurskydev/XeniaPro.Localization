@@ -1,4 +1,7 @@
 ﻿@inherits LayoutComponentBase
+@inject ILocalizer Localizer;
+@inject ILanguageProvider LanguageProvider;
+@inject IAsyncLocalizationProvider LocaleProvider;
 
 <div class="page">
     <div class="sidebar">
@@ -7,7 +10,7 @@
 
     <main>
         <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">@Localizer["About"]</a>
         </div>
 
         <article class="content px-4">
@@ -15,3 +18,12 @@
         </article>
     </main>
 </div>
+
+@code
+{
+    protected override void OnInitialized()
+    {
+        LanguageProvider.LanguageUpdated += StateHasChanged;
+        LocaleProvider.LocalesUpdated += StateHasChanged;
+    }
+}

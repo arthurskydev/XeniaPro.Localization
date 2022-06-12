@@ -4,5 +4,14 @@
   "HowIsBlazor": "How is Blazor working for you?",
   "Home": "Home",
   "Counter": "Counter",
-  "FetchData": "Fetch data"
+  "FetchData": "Fetch data",
+  "TakeSurvey": "Please take our {Survey:brief Survey}",
+  "CurrentCount": "Current count",
+  "ClickMe": "Click me!",
+  "WeatherForecast": "Weather Forecast",
+  "About": "About",
+  "WeatherForecastExplained": "This component demonstrates fetching data from the server.",
+  "Date": "Date",
+  "Temp": "Temperature",
+  "Summary": "Summary"
 }

@@ -1,10 +1,11 @@
 using Microsoft.Extensions.Logging;
 using Moq;
 using RichardSzalay.MockHttp;
+using XeniaPro.Localization.UnitTests.Core;
 using XeniaPro.Localization.UnitTests.Setup;
 using XeniaPro.Localization.Web;
 
-namespace XeniaPro.Localization.UnitTests.Tests;
+namespace XeniaPro.Localization.UnitTests.Web;
 
 public class WebLocalizationProviderTests : AsyncLocalizationProviderTests
 {

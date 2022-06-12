@@ -1,24 +1,15 @@
 namespace XeniaPro.Localization.Abstractions;
 
-public record Language
+public record Language(string Name, string ShortHand)
 {
-    public string Name { get; set; }
-    public string ShortHand { get; set; }
-
-
-    public Language(string name, string shortHand)
-    {
-        Name = name;
-        ShortHand = shortHand;
-    }
-
-    public Language()
-    {
-        
-    }
-    
     public override string ToString()
     {
         return $"{Name}, {ShortHand}";
+    }
+
+    public static implicit operator Language(string language)
+    {
+        var arr = language.Split(',', 2, StringSplitOptions.TrimEntries);
+        return new Language(arr.First(), arr.Last());
     }
 }

@@ -23,13 +23,13 @@ public static class LocaleItemFactory
             throw new InvalidStringInterpolationException(key);
 
 
-        var denestedBegins = unescapedBegins
+        var beginsDeNested = unescapedBegins
             .Where((_, i) => i == 0 || unescapedBegins[i - 1] > unescapedTerms[i]).Select(x => x).ToList();
-        var denestedTerms = unescapedTerms
+        var termsDeNested = unescapedTerms
             .Where((_, i) => i == unescapedTerms.Count-1 || unescapedTerms[i + 1] < unescapedBegins[i]).Select(x => x).ToList();
 
 
-        var zipped = denestedBegins.Zip(denestedTerms).ToList();
+        var zipped = beginsDeNested.Zip(termsDeNested).ToList();
 
         var valLen = value.Length;
         var valueBuilder = new StringBuilder(value);

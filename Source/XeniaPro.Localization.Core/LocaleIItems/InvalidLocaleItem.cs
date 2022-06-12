@@ -1,4 +1,3 @@
-using System;
 using XeniaPro.Localization.Abstractions;
 
 namespace XeniaPro.Localization.Core.LocaleIItems;

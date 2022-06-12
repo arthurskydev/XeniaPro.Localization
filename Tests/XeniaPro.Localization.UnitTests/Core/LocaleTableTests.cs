@@ -2,7 +2,7 @@ using XeniaPro.Localization.Abstractions;
 using XeniaPro.Localization.Core.LocaleTables;
 using XeniaPro.Localization.UnitTests.Setup;
 
-namespace XeniaPro.Localization.UnitTests.Tests;
+namespace XeniaPro.Localization.UnitTests.Core;
 
 public class LocaleTableTests
 {

@@ -2,7 +2,7 @@ using XeniaPro.Localization.Abstractions;
 using XeniaPro.Localization.Core.Exceptions;
 using XeniaPro.Localization.UnitTests.Setup;
 
-namespace XeniaPro.Localization.UnitTests.Tests;
+namespace XeniaPro.Localization.UnitTests.Core;
 
 public abstract class AsyncLocalizationProviderTests
 {

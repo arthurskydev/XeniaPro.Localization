@@ -1,11 +1,12 @@
 ﻿@page "/fetchdata"
 @inject HttpClient Http
+@inherits LocalizedComponentBase
 
-<PageTitle>Weather forecast</PageTitle>
+<PageTitle>@Localizer["WeatherForecast"]</PageTitle>
 
-<h1>Weather forecast</h1>
+<h1>@Localizer["WeatherForecast"]</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>@Localizer["WeatherForecastExplained"]</p>
 
 @if (forecasts == null)
 {
@@ -18,10 +19,10 @@ else
     <table class="table">
         <thead>
         <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
+            <th>@Localizer["Date"]</th>
+            <th>@Localizer["Temp"] (C)</th>
+            <th>@Localizer["Temp"] (F)</th>
+            <th>@Localizer["Summary"]</th>
         </tr>
         </thead>
         <tbody>

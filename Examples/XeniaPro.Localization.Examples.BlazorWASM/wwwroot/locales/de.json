@@ -1,8 +1,17 @@
 {
   "HelloWorld": "Hallo Welt!",
   "Welcome": "Willkommen in ihrer neuen App!",
-  "HowIsBlazor": "Wie funktioniert Blazor für sie?",
+  "HowIsBlazor": "Wie gefällt ihnen Blazor?",
   "Home": "Home",
   "Counter": "Zähler",
-  "FetchData": "Daten abrufen"
+  "FetchData": "Daten abrufen",
+  "TakeSurvey": "Bitte füllen Sie unsere {Survey:kurze Umfrage} aus",
+  "CurrentCount": "Gezählt",
+  "ClickMe": "Klick' mich!",
+  "WeatherForecast": "Wetterbericht",
+  "About": "Über",
+  "WeatherForecastExplained": "Diese Komponente demostriert wie Sie Daten von einem anderen Server erhalten können.",
+  "Date": "Datum",
+  "Temp": "Temperatur",
+  "Summary": "Zusammenfassung"
 }

@@ -7,7 +7,7 @@ using XeniaPro.Localization.Core.LocaleTables;
 using XeniaPro.Localization.Core.Localizers;
 using XeniaPro.Localization.UnitTests.Setup;
 
-namespace XeniaPro.Localization.UnitTests.Tests;
+namespace XeniaPro.Localization.UnitTests.Core;
 
 public class MockLocalizationProvider : ILocalizationProvider
 {

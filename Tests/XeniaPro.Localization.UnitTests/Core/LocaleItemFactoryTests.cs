@@ -1,6 +1,6 @@
 using XeniaPro.Localization.Core.LocaleIItems;
 
-namespace XeniaPro.Localization.UnitTests.Tests;
+namespace XeniaPro.Localization.UnitTests.Core;
 
 public class LocaleItemFactoryTests
 {
