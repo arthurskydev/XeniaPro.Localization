@@ -108,7 +108,7 @@ You can also nest them: ``{This:is{A:brief}survey}``
 |This |Is     |
 |A    |Brief  |
 
-In order to escape either of them, place two or more in a squence.
+In order to escape `{` or `}` place two or more in a squence.
 
 Keep in mind that if you intentionally use brackets in squence and do not want them to escape eachother, divide them using the `@` symbol. `@` is escaped using the earlier principle.
 
