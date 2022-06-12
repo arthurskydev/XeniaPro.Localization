@@ -144,3 +144,16 @@ And pass paramters to access nested strings
 A numeric paramter accesses a part of the "skeleton" and a text string or chain of strings will access nested strings, that were declared using the `{Key:Value}` notaion.
 
 Notice that the skeleton is 0 indexed.
+
+# Feedback, feature and pull requests
+
+I will *really* appreceate your feedback. Feel free to tell me what I am doing wrong and what I can improve.
+
+Feature requests are appreciated and might be implemented if demand is there.
+
+You have time to spare? Sure do a pull request! But please tell me what you are working on beforehand.
+
+## Contact
+<a href="https://discordapp.com/users/764794958955544586/">
+    <img src="https://brandslogos.com/wp-content/uploads/thumbs/discord-logo-vector.svg" alt="discord-logo" width="50"/>
+</a>
