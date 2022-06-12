@@ -141,7 +141,7 @@ And pass paramters to access nested strings
     @Localizer["TakeSurvey", "1"]
 </div>
 ```
-A numeric paramter accesses a part of the "skeleton" and a text string or chain of strings will access nested strings, that were declared using the `{Key:Value}` notaion.
+A numeric paramter accesses a part of the "skeleton" and a text string will access a nested string that was declared using the `{Key:Value}` notaion. You can chain these parameters aswell in order to reach strings that are nested further.
 
 Notice that the skeleton is 0 indexed.
 
