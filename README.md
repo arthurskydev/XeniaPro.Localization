@@ -122,12 +122,12 @@ Text that is around the nested strings is called ***skeleton***. You can access 
 
 ### Usage in Blazor components
 
-Make sure desired comonent inherits `LocalizedComponentBase`
+Make sure that the desired comonent inherits `LocalizedComponentBase`
 ```razor
 @inherits LocalizedComponentBase
 ```
 
-You can nor use the `Localizer` service in your component
+You can now use the `Localizer` service in your component
 ```razor
 <h1>@Localizer["HelloWorld"]</h1>
 ```
