@@ -30,7 +30,7 @@ builder.Services.AddXeniaLocalization(options =>
 
 ### Blazor WASM - Get locales from web
 
-If you are using Blazor WASM you might want to fetch the locale files from somewhere. We will not fetch locale files before they are used.
+If you are using Blazor WASM you might want to fetch the locale files from somewhere. We will not fetch locale files until they are used.
 
     dotnet add package XeniaPro.Localization.Web
     
