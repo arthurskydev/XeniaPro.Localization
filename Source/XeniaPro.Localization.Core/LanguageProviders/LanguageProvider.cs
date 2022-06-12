@@ -18,6 +18,7 @@ public class LanguageProvider : ILanguageProvider
         {
             if (_currentLanguage != null) return _currentLanguage;
             _currentLanguage = _languages.First();
+            _logger.LogInformation("Default language {Language}", _currentLanguage);
             return CurrentLanguage;
         }
     }
@@ -27,7 +28,7 @@ public class LanguageProvider : ILanguageProvider
     private readonly List<Language> _languages;
     private readonly ILogger<LanguageProvider> _logger; 
 
-    public LanguageProvider(IOptions<ILocalizationOptions> options, ILogger<LanguageProvider> logger)
+    public LanguageProvider(IOptions<LocalizationOptions> options, ILogger<LanguageProvider> logger)
     {
         _logger = logger;
         _languages = options.Value.Languages;

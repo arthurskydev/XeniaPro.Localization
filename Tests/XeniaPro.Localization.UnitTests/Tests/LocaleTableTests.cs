@@ -22,13 +22,13 @@ public class LocaleTableTests
     {
         var dict = TestSetup.GetDictionary(_language!.ShortHand);
         var rndIdx = _random.Next(dict.Count);
-        Assert.That(_table.GetByKey(dict.Keys.ElementAt(rndIdx)), 
+        Assert.That(_table.GetItemByKey(dict.Keys.ElementAt(rndIdx)).GetString(), 
             Is.EqualTo(dict.Values.ElementAt(rndIdx)));
     }
     
     [Test]
     public void DoesGetEmptyIfNoCorrespondingEntry()
     {
-        Assert.That(_table.GetByKey("foo"), Is.EqualTo(string.Empty));
+        Assert.That(_table.GetItemByKey("foo").GetString(), Is.EqualTo(string.Empty));
     }
 }

@@ -17,20 +17,20 @@ public class LanguageProviderTests
     public void MsOptions()
     {
         var logger = Mock.Of<ILogger<LanguageProvider>>();
-        var options = Options.Create(TestSetup.WebOptions);
+        var options = Options.Create(TestSetup.Options);
         _provider = new LanguageProvider(options, logger);
     }
 
     [Test]
     public void DoesHaveLanguages()
     {
-        Assert.That(_provider.Languages, Is.EquivalentTo(TestSetup.WebOptions.Languages));
+        Assert.That(_provider.Languages, Is.EquivalentTo(TestSetup.Options.Languages));
     }
 
     [Test, Order(1)]
     public void DoesSetDefaultLanguage()
     {
-        Assert.That(_provider.CurrentLanguage, Is.EqualTo(TestSetup.WebOptions.Languages.First()));
+        Assert.That(_provider.CurrentLanguage, Is.EqualTo(TestSetup.Options.Languages.First()));
     }
 
     [Test, Order(2)]

@@ -26,11 +26,11 @@ public class LocalizerTests
     [SetUp]
     public void Setup()
     {
-        var options = Options.Create(TestSetup.WebOptions);
+        var options = Options.Create(TestSetup.Options);
         var logger = Mock.Of<ILogger<LanguageProvider>>();
         _languageProvider = new LanguageProvider(options, logger);
         var localeProvider = new MockLocalizationProvider();
-        _localizer = new Localizer(localeProvider, _languageProvider);
+        _localizer = new Localizer(localeProvider, _languageProvider, options);
     }
 
     [Test]

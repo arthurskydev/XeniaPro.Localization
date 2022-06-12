@@ -26,7 +26,7 @@ public abstract class AsyncLocalizationProviderTests
         Assert.Multiple(() =>
         {
             Assert.That(updatedTable.Language, Is.EqualTo(lang));
-            Assert.That(updatedTable.GetByKey(TestSetup.GetDictionary(languageShort).Keys.ElementAt(rndIdx)),
+            Assert.That(updatedTable.GetItemByKey(TestSetup.GetDictionary(languageShort).Keys.ElementAt(rndIdx)).GetString(),
                 Is.EqualTo(TestSetup.GetDictionary(languageShort).Values.ElementAt(rndIdx)));
         });
     }

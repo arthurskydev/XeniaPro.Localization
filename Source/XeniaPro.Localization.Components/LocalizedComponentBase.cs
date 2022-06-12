@@ -5,11 +5,13 @@ namespace XeniaPro.Localization.Components;
 
 public abstract class LocalizedComponentBase : ComponentBase
 {
-    [Inject] private IAsyncLocalizationProvider Provider { get; set; } = null!;
-    [Inject] protected ILocalizer Localizer { get; set; } = null!;
+    [Inject] public IAsyncLocalizationProvider Provider { get; set; } = null!;
+    [Inject] public ILanguageProvider LanguageProvider { get; set; } = null!;
+    [Inject] public ILocalizer Localizer { get; set; } = null!;
 
     protected override void OnInitialized()
     {
         Provider.LocalesUpdated += StateHasChanged;
+        LanguageProvider.LanguageUpdated += StateHasChanged;
     }
 }

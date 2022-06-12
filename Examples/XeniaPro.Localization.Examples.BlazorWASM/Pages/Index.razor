@@ -1,14 +1,13 @@
 ﻿@inherits LocalizedComponentBase
-@inject ILanguageProvider LanguageProvider
 @page "/"
 
 <PageTitle>Index</PageTitle>
 
 <h1>@Localizer["HelloWorld"]</h1>
-<select>
+<select @onchange="e => LanguageProvider.SetLanguage(LanguageProvider.Languages.First(x => x.ShortHand == (string)e.Value!))">
     @foreach (var lang in LanguageProvider.Languages)
     {
-        <option @onclick="() => LanguageProvider.SetLanguage(lang)">@lang</option>
+        <option value="@lang.ShortHand">@lang</option>
     }
 </select>
 

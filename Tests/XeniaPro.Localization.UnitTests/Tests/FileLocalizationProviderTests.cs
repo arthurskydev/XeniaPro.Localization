@@ -11,7 +11,10 @@ public class FileLocalizationProviderTests : AsyncLocalizationProviderTests
     [SetUp]
     public void Setup()
     {
-        var options = Options.Create(TestSetup.FileOptions);
+        var options = Options.Create<FileLocalizationOptions>(new FileLocalizationOptions
+        {
+            ResourcePath = "/"
+        });
         var mockLogger = Mock.Of<ILogger<FileLocalizationProvider>>();
         Provider = new FileLocalizationProvider(options, mockLogger);
     }

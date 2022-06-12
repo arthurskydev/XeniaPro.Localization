@@ -8,47 +8,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8582a866-ded0-44d3-9e61-304fcfc6530b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/wwwroot/locales/de.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/wwwroot/locales/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/IAsyncLocalizationProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocalizationOptions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocalizationProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/Language.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/XeniaPro.Localization.Abstractions.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Localizers/Localizer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Files/DiExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Files/FileLocalizationProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Files/XeniaPro.Localization.Files.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Web/DiExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Web/WebLocalizationProvider.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Web/XeniaPro.Localization.Web.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/AsyncLocalizationProviderTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/FileLocalizationProviderTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/web.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocaleItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/DiExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/ComplexLocaleItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/InvalidLocaleItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/LocaleItemFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/PlainLocaleItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Options/LocalizationOptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Files/LocalizationOptionsExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Web/LocalizationOptionsExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.XeniaPro.Localization/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.XeniaPro.Localization/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Pages/Index.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Shared/MainLayout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/Shared/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/wwwroot/locales/de.json" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/wwwroot/locales/de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/wwwroot/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/XeniaPro.Localization.Examples.BlazorWASM/wwwroot/locales/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocaleTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocaleTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocalizationOptions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocalizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocalizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/Language.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/Language.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/LocalizedComponentBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/LocalizedComponentBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/XeniaPro.Localization.Components.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Components/XeniaPro.Localization.Components.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/DiExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/Exceptions/InvalidLanguageException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/Exceptions/InvalidLanguageException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/Exceptions/TableDoesNotExistException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/Exceptions/TableDoesNotExistException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LanguageProviders/ILanguageProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILanguageProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LanguageProviders/LanguageProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LanguageProviders/LanguageProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/IAsyncLocalizationProvider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleProviders/WebLocalizationProvider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleTables/ILocaleTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocaleTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/LocaleTables/LocaleTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/LocaleTable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/Localizers/AsyncLocalizer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/Localizers/ILocalizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Abstractions/ILocalizer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/Models/Language.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization/XeniaPro.Localization.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/XeniaPro.Localization.Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LanguageProviders/LanguageProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LanguageProviders/LanguageProvider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/LocaleTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/LocaleTables/LocaleTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Localizers/Localizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/Localizers/Localizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/XeniaPro.Localization.Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Source/XeniaPro.Localization.Core/XeniaPro.Localization.Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Files/DiExtensions.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/XeniaPro.Localization.Web/DiExtensions.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Setup/TestSetup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Setup/TestSetup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/AsyncLocalizerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/AsyncLocalizationProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/AsyncLocalizationProviderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/FileLocalizationProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/FileLocalizationProviderTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LanguageProviderTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleTableTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocaleTableTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/WebLocalizationProviderTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/WebLocalizationProviderTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizerTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/Tests/LocalizerTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/XeniaPro.Localization.UnitTests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/XeniaPro.Localization.UnitTests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/restOptions.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/file.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/XeniaPro.Localization.sln" beforeDir="false" afterPath="$PROJECT_DIR$/XeniaPro.Localization.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/file.json" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/options.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/XeniaPro.Localization.UnitTests/web.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,9 +112,10 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ToolWindowBuild.ShowToolbar&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -227,7 +223,11 @@
       <workItem from="1654727963199" duration="513000" />
       <workItem from="1654776447297" duration="2446000" />
       <workItem from="1654779247202" duration="3445000" />
-      <workItem from="1654782798178" duration="5155000" />
+      <workItem from="1654782798178" duration="5227000" />
+      <workItem from="1654808942191" duration="987000" />
+      <workItem from="1654859479672" duration="1729000" />
+      <workItem from="1654872061573" duration="6332000" />
+      <workItem from="1654893144104" duration="5500000" />
     </task>
     <task id="LOCAL-00001" summary="yolo">
       <created>1654546904890</created>
@@ -271,7 +271,21 @@
       <option name="project" value="LOCAL" />
       <updated>1654685522543</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Divided into Core / Abstractions + Web + File projects">
+      <created>1654808873093</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1654808873093</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added example project">
+      <created>1654808896258</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1654808896258</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,6 +377,8 @@
     <MESSAGE value="add unversioned files" />
     <MESSAGE value="Features:&#10;Added configuration via Microsoft.Extensions.Configuration&#10;&#10;API Changes:&#10;Changed ILanguageProvider.GetLanguages property name to ILanguageProvider.Languages" />
     <MESSAGE value="yolo" />
-    <option name="LAST_COMMIT_MESSAGE" value="yolo" />
+    <MESSAGE value="Divided into Core / Abstractions + Web + File projects" />
+    <MESSAGE value="Added example project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added example project" />
   </component>
 </project>
