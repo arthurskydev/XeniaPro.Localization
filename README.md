@@ -1,5 +1,7 @@
 # XeniaPro.Localization
 
+https://img.shields.io/nuget/v/XeniaPro.Localization.Core?color=green
+
 # [Simple .Net library that gets localized strings from JSON files](https://www.nuget.org/packages/XeniaPro.Localization.Core/)
 
 ## Installation & usage with Blazor
