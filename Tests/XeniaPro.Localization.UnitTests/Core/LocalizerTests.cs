@@ -1,3 +1,4 @@
+using System.Globalization;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
@@ -6,6 +7,7 @@ using XeniaPro.Localization.Core.Interfaces;
 using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.Core.LocaleTables;
 using XeniaPro.Localization.Core.Localizers;
+using XeniaPro.Localization.Core.Models;
 using XeniaPro.Localization.UnitTests.Setup;
 
 namespace XeniaPro.Localization.UnitTests.Core;
@@ -14,8 +16,13 @@ public class MockLocalizationProvider : ILocalizationProvider
 {
     public ILocaleTable GetTable(Language language)
     {
-        var dict = TestSetup.GetDictionary(language.ShortHand);
+        var dict = TestSetup.GetDictionary(language.LocaleName);
         return new LocaleTable(dict, language);
+    }
+
+    public ILocaleTable GetTable(string @namespace, Language language)
+    {
+        return GetTable(language);
     }
 }
 
@@ -39,7 +46,7 @@ public class LocalizerTests
     [TestCase("English", "en")]
     public void GetFromBracketsOverload(string langName, string langShort)
     {
-        var lang = new Language(langName, langShort);
+        var lang = new Language(langName, langShort, CultureInfo.InvariantCulture);
         _languageProvider.SetLanguage(lang);
         TestGet(key => _localizer[key], langShort);
     }

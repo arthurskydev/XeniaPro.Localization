@@ -1,7 +1,9 @@
+using System.Globalization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using XeniaPro.Localization.Core;
 using XeniaPro.Localization.Core.LanguageProviders;
+using XeniaPro.Localization.Core.Models;
 using XeniaPro.Localization.Examples.BlazorWASM;
 using XeniaPro.Localization.Web;
 
@@ -22,12 +24,11 @@ builder.Services.AddXeniaLocalization(options =>
      *
      * Make sure to manually cache the selected language on your client.
      */
-    options.Languages = new List<Language>
-    {
-        "de-DE, de",
-        "en-EN, en"
-    };
-
+    options.Languages.Add(Language.FromCultureInfo(CultureInfo.GetCultureInfo("de"), "de"));
+    options.Languages.Add(Language.FromCultureInfo(CultureInfo.GetCultureInfo("en"), "en"));
+    
+    // Use namespaces to keep locale files short and organized in their own directories.
+    options.UseNamespaces();
     options.UseWebLocalization(webOptions =>
     {
         // Place your locale files in a directory "locales" in "wwwroot".

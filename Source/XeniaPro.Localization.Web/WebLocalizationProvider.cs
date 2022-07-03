@@ -1,42 +1,48 @@
-using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using XeniaPro.Localization.Core.Exceptions;
 using XeniaPro.Localization.Core.Interfaces;
 using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.Core.LocaleTables;
+using XeniaPro.Localization.Core.Models;
+using XeniaPro.Localization.Core.Options;
 
 namespace XeniaPro.Localization.Web;
+
+public enum TableStatus
+{
+    Loading,
+    Loaded,
+    Failed
+}
+
+public record LocaleTableContainer(TableStatus Status, Exception TableException, ILocaleTable Table);
 
 public class WebLocalizationProvider : IAsyncLocalizationProvider
 {
     private readonly HttpClient _client;
     private readonly ILogger<WebLocalizationProvider> _logger;
     private readonly object _lockObj = new();
+    private readonly LocalizationOptions _options;
 
-    private enum TableStatus
-    {
-        Loading,
-        Loaded,
-        Failed
-    }
-
-    private record LocaleTableContainer(TableStatus Status, Exception TableException, ILocaleTable Table);
 
     private readonly List<LocaleTableContainer> _locales = new();
 
     public event Action LocalesUpdated;
 
-    protected WebLocalizationProvider(HttpClient client, ILogger<WebLocalizationProvider> logger)
+    protected WebLocalizationProvider(HttpClient client, ILogger<WebLocalizationProvider> logger,
+        IOptions<LocalizationOptions> locOptions)
     {
         _client = client;
         _logger = logger;
+        _options = locOptions.Value;
     }
 
-    public WebLocalizationProvider(IOptions<WebLocalizationOptions> options, ILogger<WebLocalizationProvider> logger)
+    public WebLocalizationProvider(IOptions<WebLocalizationOptions> options, ILogger<WebLocalizationProvider> logger,
+        IOptions<LocalizationOptions> locOptions)
     {
         _logger = logger;
         _client = new HttpClient();
+        _options = locOptions.Value;
         _client.BaseAddress = new Uri(options.Value.ResourceUrl);
     }
 
@@ -71,14 +77,12 @@ public class WebLocalizationProvider : IAsyncLocalizationProvider
     {
         try
         {
-            var response = await _client.GetAsync($"{language.ShortHand}.json");
-            if (!response.IsSuccessStatusCode)
-                throw new TableDoesNotExistException(language);
-
-            var strings =
-                await JsonSerializer.DeserializeAsync<Dictionary<string, string>>(
-                    await response.Content.ReadAsStreamAsync());
-            var containerObj = new LocaleTableContainer(TableStatus.Loaded, null, new LocaleTable(strings, language));
+            LocaleTableContainer containerObj;
+            if (_options.NamespacesEnabled)
+                containerObj = await _client.LoadNamespacedTable(language);
+            else
+                containerObj = await _client.LoadStandardTable(language);
+            
             lock (_lockObj)
             {
                 var container = _locales.Find(x => x.Table.Language == language);

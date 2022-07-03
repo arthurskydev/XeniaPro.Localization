@@ -1,6 +1,8 @@
+using System.Globalization;
 using XeniaPro.Localization.Core.Interfaces;
 using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.Core.LocaleTables;
+using XeniaPro.Localization.Core.Models;
 using XeniaPro.Localization.UnitTests.Setup;
 
 namespace XeniaPro.Localization.UnitTests.Core;
@@ -14,14 +16,14 @@ public class LocaleTableTests
     [SetUp]
     public void Setup()
     {
-        _language = new Language("Deutsch", "de");
-        _table = new LocaleTable(TestSetup.GetDictionary(_language.ShortHand), _language);
+        _language = new Language("Deutsch", "de", CultureInfo.InvariantCulture);
+        _table = new LocaleTable(TestSetup.GetDictionary(_language.LocaleName), _language);
     }
 
     [Test]
     public void DoesGetValueByKey()
     {
-        var dict = TestSetup.GetDictionary(_language!.ShortHand);
+        var dict = TestSetup.GetDictionary(_language!.LocaleName);
         var rndIdx = _random.Next(dict.Count);
         Assert.That(_table.GetItemByKey(dict.Keys.ElementAt(rndIdx)).GetString(), 
             Is.EqualTo(dict.Values.ElementAt(rndIdx)));

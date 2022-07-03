@@ -14,9 +14,26 @@ public class FileLocalizationProviderTests : LocalizationProviderTests
     {
         var options = Options.Create(new FileLocalizationOptions
         {
-            ResourcePath = $"{Directory.GetCurrentDirectory()}/"
+            ResourcePath = $"{Directory.GetCurrentDirectory()}/locales/"
         });
         var language = new LanguageProvider(Options.Create(TestSetup.Options), new NullLogger<LanguageProvider>());
-        Provider = new FileLocalizationProvider(options, new NullLogger<FileLocalizationProvider>(), language);
+        Provider = new FileLocalizationProvider(options, new NullLogger<FileLocalizationProvider>(), language, Options.Create(TestSetup.Options));
+    }
+}
+
+public class FileLocalizationProviderTestsWNamespaces : LocalizationProviderTests
+{
+    [SetUp]
+    public void Setup()
+    {
+        var options = Options.Create(new FileLocalizationOptions
+        {
+            ResourcePath = $"{Directory.GetCurrentDirectory()}/locales/"
+        });
+        var locOpt = TestSetup.Options;
+        locOpt.UseNamespaces();
+        
+        var language = new LanguageProvider(Options.Create(TestSetup.Options), new NullLogger<LanguageProvider>());
+        Provider = new FileLocalizationProvider(options, new NullLogger<FileLocalizationProvider>(), language, Options.Create(locOpt));
     }
 }

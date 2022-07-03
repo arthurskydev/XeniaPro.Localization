@@ -1,6 +1,9 @@
-using Microsoft.Extensions.Logging;
-using Moq;
+using System.Globalization;
+using Microsoft.Extensions.Logging.Abstractions;
+using Microsoft.Extensions.Options;
 using RichardSzalay.MockHttp;
+using XeniaPro.Localization.Core.LanguageProviders;
+using XeniaPro.Localization.Core.Options;
 using XeniaPro.Localization.UnitTests.Core;
 using XeniaPro.Localization.UnitTests.Setup;
 using XeniaPro.Localization.Web;
@@ -11,24 +14,30 @@ public class WebLocalizationProviderTests : AsyncLocalizationProviderTests
 {
     private class TestProvider : WebLocalizationProvider
     {
-        public TestProvider(HttpClient client, ILogger<WebLocalizationProvider> logger) : base(client, logger) { }
+        public TestProvider(HttpClient client) : base(client, NullLogger<WebLocalizationProvider>.Instance, Options.Create(TestSetup.Options)) { }
     }
     
     
     [SetUp]
     public void Setup()
     {
-        var mockHttp = new MockHttpMessageHandler();
-        mockHttp.When("http://localhost/de.json")
-            .Respond("application/json", TestSetup.GetLocaleFile("de"));
+        Provider = new TestProvider(TestSetup.GetClient());
+    }
+}
 
-        mockHttp.When("http://localhost/en.json")
-            .Respond("application/json", TestSetup.GetLocaleFile("en"));
-
-        var mockClient = mockHttp.ToHttpClient();
-        var mockLogger = Mock.Of<ILogger<WebLocalizationProvider>>();
-        mockClient.BaseAddress = new Uri("http://localhost");
-        mockClient.Timeout = TimeSpan.FromSeconds(1);
-        Provider = new TestProvider(mockClient, mockLogger);
+public class WebLocalizationProviderTestsWOptions : AsyncLocalizationProviderTests
+{
+    private class TestProvider : WebLocalizationProvider
+    {
+        public TestProvider(HttpClient client, LocalizationOptions options) : base(client, NullLogger<WebLocalizationProvider>.Instance, Options.Create(options)) { }
+    }
+    
+    
+    [SetUp]
+    public void Setup()
+    {
+        var options = TestSetup.Options;
+        options.UseNamespaces();
+        Provider = new TestProvider(TestSetup.GetClient(), options);
     }
 }

@@ -27,14 +27,38 @@
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="de.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <None Update="de\.index">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="en.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <None Update="de\world.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="options.json">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <None Update="de\hello.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="locales\en.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="locales\de.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="locales\de\loc.index">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="locales\de\world.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="locales\de\hello.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="locales\en\world.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="locales\en\hello.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="locales\en\loc.index">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>
 

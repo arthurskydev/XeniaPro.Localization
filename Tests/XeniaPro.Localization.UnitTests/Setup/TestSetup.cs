@@ -1,51 +1,71 @@
+using System.Globalization;
 using System.Text.Json;
+using RichardSzalay.MockHttp;
+using XeniaPro.Localization.Core.Models;
 using XeniaPro.Localization.Core.Options;
 
 namespace XeniaPro.Localization.UnitTests.Setup;
 
 public static class TestSetup
 {
-    private static LocalizationOptions? _options;
-
-    public static LocalizationOptions Options
+    public static LocalizationOptions Options => new()
     {
-        get
+        PlaceholderString = ".",
+        Languages = new List<Language>
         {
-            if (_options is not null)
-            {
-                return _options;
-            }
-
-            var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/options.json");
-            var options = JsonSerializer.Deserialize<LocalizationOptions>(json);
-            _options = options;
-            return Options;
+            new("Deutsch", "de", CultureInfo.InvariantCulture),
+            new("English", "en", CultureInfo.InvariantCulture)
         }
-    }
+    };
 
-    private static readonly Dictionary<string, string> Locales = new();
     public static string GetLocaleFile(string langCode)
     {
-        if (Locales.ContainsKey(langCode))
-        {
-            return Locales[langCode];
-        }
-        
-        var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/{langCode}.json");
-        Locales.Add(langCode, json);
+        var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/locales/{langCode}.json");
+        return json;
+    }
+    
+    public static string GetFile(string relPath)
+    {
+        var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}/{relPath}");
         return json;
     }
 
-    private static readonly Dictionary<string, Dictionary<string, string>> Dictionaries = new();
     public static Dictionary<string, string> GetDictionary(string langCode)
     {
-            if (Dictionaries.ContainsKey(langCode))
-            {
-                return Dictionaries[langCode];
-            }
-
             var dict = JsonSerializer.Deserialize<Dictionary<string, string>>(GetLocaleFile(langCode));
-            Dictionaries.Add(langCode, dict!);
             return dict!;
+    }
+    
+    public static HttpClient GetClient() {
+        var mockHttp = new MockHttpMessageHandler();
+        mockHttp.When("http://localhost/locales/de.json")
+            .Respond("application/json", GetLocaleFile("de"));
+
+        mockHttp.When("http://localhost/locales/en.json")
+            .Respond("application/json", GetLocaleFile("en"));
+
+        mockHttp.When("http://localhost/locales/de/loc.index")
+            .Respond("application/json", GetFile("locales/de/loc.index"));
+        
+        mockHttp.When("http://localhost/locales/en/loc.index")
+            .Respond("application/json", GetFile("locales/en/loc.index"));
+        
+        mockHttp.When("http://localhost/locales/en/hello.json")
+            .Respond("application/json", GetFile("locales/en/hello.json"));
+        
+        mockHttp.When("http://localhost/locales/de/hello.json")
+            .Respond("application/json", GetFile("locales/de/hello.json"));
+        
+        mockHttp.When("http://localhost/locales/en/world.json")
+            .Respond("application/json", GetFile("locales/en/world.json"));
+        
+        mockHttp.When("http://localhost/locales/de/world.json")
+            .Respond("application/json", GetFile("locales/de/world.json"));
+            
+
+        var mockClient = mockHttp.ToHttpClient();
+        mockClient.BaseAddress = new Uri("http://localhost/locales/");
+        mockClient.Timeout = TimeSpan.FromSeconds(1);
+        return mockClient;
     }
 }

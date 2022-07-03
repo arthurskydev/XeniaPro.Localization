@@ -4,9 +4,9 @@ using XeniaPro.Localization.Core.Models;
 
 namespace XeniaPro.Localization.Core.Exceptions;
 
-public class InvalidLanguageException : Exception
+public class IndexNotFoundException : Exception
 {
-    public InvalidLanguageException(Language language) : base($"This language was not intended to be set: {language}.")
+    public IndexNotFoundException(Language language) : base($"\".index\" for {language} was not found!")
     {
         
     }
