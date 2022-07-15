@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using XeniaPro.Localization.Core.Interfaces;
-using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.Core.LocaleIItems;
 using XeniaPro.Localization.Core.Models;
 

@@ -5,7 +5,7 @@ namespace XeniaPro.Localization.Web;
 
 public abstract class LocalizedComponentBase : ComponentBase
 {
-    [Inject] public IAsyncLocalizationProvider Provider { get; set; } = null!;
+    [Inject] public ILocalizationProvider Provider { get; set; } = null!;
     [Inject] public ILanguageProvider LanguageProvider { get; set; } = null!;
     [Inject] public ILocalizer Localizer { get; set; } = null!;
 

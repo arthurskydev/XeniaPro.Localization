@@ -20,7 +20,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Source\XeniaPro.Localization.Components\XeniaPro.Localization.Components.csproj" />
       <ProjectReference Include="..\..\Source\XeniaPro.Localization.Core\XeniaPro.Localization.Core.csproj" />
       <ProjectReference Include="..\..\Source\XeniaPro.Localization.Files\XeniaPro.Localization.Files.csproj" />
       <ProjectReference Include="..\..\Source\XeniaPro.Localization.Web\XeniaPro.Localization.Web.csproj" />
@@ -42,9 +41,6 @@
       <None Update="locales\de.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="locales\de\loc.index">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
       <None Update="locales\de\world.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
@@ -55,9 +51,6 @@
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
       <None Update="locales\en\hello.json">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
-      <None Update="locales\en\loc.index">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>

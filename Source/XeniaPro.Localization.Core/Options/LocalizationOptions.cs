@@ -15,13 +15,4 @@ public class LocalizationOptions
     /// Provide a list of languages that are know to be available.
     /// </summary>
     public List<Language> Languages { get; set; } = new();
-
-    /// <summary>
-    /// Experimental: Divide your locale files into namespaces to keep them short and organized. File convention: "{locale_root}/{language}/{namespace}namespace}.json". Disabley by default.
-    /// </summary>
-    public void UseNamespaces()
-    {
-        NamespacesEnabled = true;
-    }
-    public bool NamespacesEnabled { get; private set;  }
 }

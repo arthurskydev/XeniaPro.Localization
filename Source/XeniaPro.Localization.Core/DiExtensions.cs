@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 using XeniaPro.Localization.Core.Interfaces;
 using XeniaPro.Localization.Core.LanguageProviders;
@@ -19,7 +20,10 @@ public static class DiExtensions
             options.Languages = config.Languages;
             options.PlaceholderString = config.PlaceholderString;
         });
-        config.ConfigureLocalizationProvider(services);
+        foreach (var configureAction in config.ConfigureLocalizationProviders)
+        {
+            configureAction(services);
+        };
         services.AddScoped<ILanguageProvider, LanguageProvider>();
         services.AddScoped<ILocalizer, Localizer>();
         return services;
@@ -28,5 +32,5 @@ public static class DiExtensions
 
 public class LocalizationConfiguration : LocalizationOptions
 {
-    public Action<IServiceCollection> ConfigureLocalizationProvider { get; set; }
+    public IEnumerable<Action<IServiceCollection>> ConfigureLocalizationProviders { get; set; }
 }

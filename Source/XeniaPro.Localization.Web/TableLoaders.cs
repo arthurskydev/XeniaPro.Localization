@@ -7,23 +7,12 @@ using XeniaPro.Localization.Core.Models;
 
 namespace XeniaPro.Localization.Web;
 
-public static class WebExtensions
+
+
+public static class TableLoaders
 {
-    public static async Task<LocaleTableContainer> LoadNamespacedTable(this HttpClient client, Language language)
+    public static async Task<NamespacedLocaleTableContainer> LoadNamespacedTable(this HttpClient client, Language language, string @namespace)
     {
-        var response = await client.GetAsync($"{language.LocaleName}/loc.index");
-        if (!response.IsSuccessStatusCode)
-            throw new IndexNotFoundException(language);
-
-        var index = await response.Content.ReadAsStringAsync();
-        var indices = index.Split('\n');
-        var dictionary = new Dictionary<string, List<ILocaleItem>>();
-        foreach (var i in indices)
-        {  
-            var t = i.Trim();
-            dictionary.Add(t, await client.LoadStrings(t, language));
-        }
-
         var table = new NamespacedLocaleTable(language, dictionary);
         return new LocaleTableContainer(TableStatus.Loaded, null, table);
     }

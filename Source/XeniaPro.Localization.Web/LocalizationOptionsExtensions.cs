@@ -12,9 +12,7 @@ public static class LocalizationOptionsExtensions
         options.ConfigureLocalizationProvider = (services) =>
         {
             services.Configure(configureOptions);
-            services.AddScoped<WebLocalizationProvider>();
-            services.AddScoped<ILocalizationProvider>(p => p.GetRequiredService<WebLocalizationProvider>());
-            services.AddScoped<IAsyncLocalizationProvider>(p => p.GetRequiredService<WebLocalizationProvider>());
+            services.AddScoped<ILocalizationProvider, WebLocalizationProvider>();
         };
         return options;
     }
@@ -23,9 +21,7 @@ public static class LocalizationOptionsExtensions
     {
         options.ConfigureLocalizationProvider = (services) =>
         {
-            services.AddScoped<WebLocalizationProvider>();
-            services.AddScoped<ILocalizationProvider>(p => p.GetRequiredService<WebLocalizationProvider>());
-            services.AddScoped<IAsyncLocalizationProvider>(p => p.GetRequiredService<WebLocalizationProvider>());
+            services.AddScoped<ILocalizationProvider, WebLocalizationProvider>();
         };
         return options;
     }

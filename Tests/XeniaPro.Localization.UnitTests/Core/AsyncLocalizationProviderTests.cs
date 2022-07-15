@@ -8,7 +8,7 @@ namespace XeniaPro.Localization.UnitTests.Core;
 
 public abstract class AsyncLocalizationProviderTests
 {
-    protected IAsyncLocalizationProvider Provider = null!;
+    protected ILocalizationProvider Provider = null!;
 
     [Test]
     [TestCase("Deutsch", "de")]

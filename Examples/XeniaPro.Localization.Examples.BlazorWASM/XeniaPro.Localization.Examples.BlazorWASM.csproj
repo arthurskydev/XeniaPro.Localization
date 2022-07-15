@@ -16,4 +16,8 @@
       <ProjectReference Include="..\..\Source\XeniaPro.Localization.Web\XeniaPro.Localization.Web.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\locales\en\" />
+    </ItemGroup>
+
 </Project>

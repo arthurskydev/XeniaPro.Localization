@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Options;
 using XeniaPro.Localization.Core.Exceptions;
 using XeniaPro.Localization.Core.Interfaces;
-using XeniaPro.Localization.Core.LanguageProviders;
 using XeniaPro.Localization.Core.Models;
 using XeniaPro.Localization.Core.Options;
 
@@ -16,6 +15,8 @@ public class FileLocalizationProvider : ILocalizationProvider
     private readonly LocalizationOptions _options;
 
     private readonly List<ILocaleTable> _tables;
+
+    public event Action LocalesUpdated;
 
     public FileLocalizationProvider(IOptions<FileLocalizationOptions> options, ILogger<FileLocalizationProvider> logger,
         ILanguageProvider language, IOptions<LocalizationOptions> locOptions)
